@@ -4,7 +4,6 @@
 
 [![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-green.svg)](https://www.minecraft.net/)
 [![Fabric](https://img.shields.io/badge/Loader-Fabric-orange.svg)](https://fabricmc.net/)
-[![License](https://img.shields.io/badge/License-CC0--1.0-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Alpha-yellow.svg)](https://github.com/stubfxck/amnesia/releases)
 
 ---

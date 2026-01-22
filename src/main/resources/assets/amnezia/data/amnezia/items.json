@@ -6,12 +6,12 @@
     "minecraftVersions": ["1.21.1"],
     "author": "FXXCKSH",
     "totalUniqueRecipes": 782,
-    "ideas": "Добавить рецепты по мимо workbench для blasting, campfire, smelting, smithing, smoking, stonecutting"
+    "ideas": "Add recipes by workbench for blasting, campfire, smelting, smithing, smoking, stonecutting"
   },
 
   "_defaultItems_comment": "Recipes that players can obviously craft from scratch (basic materials)",
   "defaultItems": {
-    "comment": "Рецепты, которые игрок ОЧЕВИДНО может крафтить с нуля",
+    "comment": "Recipes that a player can OBVIOUSLY craft from scratch",
     "items": [
       {"id": "minecraft:oak_planks", "rarity": "common"},
       {"id": "minecraft:spruce_planks", "rarity": "common"},
@@ -36,7 +36,7 @@
 
   "_soloItems_comment": "Individual items that can be learned separately (tools, armor, etc.)",
   "soloItems": {
-    "comment": "Независимые предметы, выпадают по отдельности",
+    "comment": "Independent items, drop out separately",
     "items": [
       {"id": "minecraft:stone_pickaxe", "rarity": "common"},
       {"id": "minecraft:stone_axe", "rarity": "common"},
@@ -250,11 +250,11 @@
 
   "_groupedItems_comment": "Hierarchical groups of related recipes (e.g., tool progression, armor sets)",
   "groupedItems": {
-    "comment": "Иерархия групп. Родительские объединяют дочерние",
+    "comment": "Hierarchy of groups. Parents merge children",
     "groups": [
       {
         "id": "tools_parent",
-        "name": "Инструменты",
+        "name": "Tools",
         "rarity": "legendary",
         "noExit": "none",
         "recipes": [],
@@ -262,7 +262,7 @@
       },
       {
         "id": "stone_tools",
-        "name": "Каменные инструменты",
+        "name": "Stone tools",
         "rarity": "common",
         "noExit": false,
         "recipes": ["minecraft:stone_pickaxe","minecraft:stone_axe","minecraft:stone_shovel","minecraft:stone_hoe","minecraft:stone_sword"],
@@ -270,7 +270,7 @@
       },
       {
         "id": "iron_tools",
-        "name": "Железные инструменты",
+        "name": "Iron tools",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:iron_pickaxe","minecraft:iron_axe","minecraft:iron_shovel","minecraft:iron_hoe","minecraft:iron_sword"],
@@ -278,7 +278,7 @@
       },
       {
         "id": "diamond_tools",
-        "name": "Алмазные инструменты",
+        "name": "Diamond tools",
         "rarity": "mythical",
         "noExit": false,
         "recipes": ["minecraft:diamond_pickaxe","minecraft:diamond_axe","minecraft:diamond_shovel","minecraft:diamond_hoe","minecraft:diamond_sword"],
@@ -286,7 +286,7 @@
       },
       {
         "id": "golden_tools",
-        "name": "Золотые инструменты",
+        "name": "Golden tools",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:golden_pickaxe","minecraft:golden_axe","minecraft:golden_shovel","minecraft:golden_hoe","minecraft:golden_sword"],
@@ -294,7 +294,7 @@
       },
       {
         "id": "armor_parent",
-        "name": "Броня",
+        "name": "Armor",
         "rarity": "legendary",
         "noExit": "none",
         "recipes": [],
@@ -302,7 +302,7 @@
       },
       {
         "id": "leather_armor",
-        "name": "Кожаная броня",
+        "name": "Leather armor",
         "rarity": "common",
         "noExit": false,
         "recipes": ["minecraft:leather_helmet","minecraft:leather_chestplate","minecraft:leather_leggings","minecraft:leather_boots"],
@@ -310,7 +310,7 @@
       },
       {
         "id": "iron_armor",
-        "name": "Железная броня",
+        "name": "Iron armor",
         "rarity": "ultraRare",
         "noExit": false,
         "recipes": ["minecraft:iron_helmet","minecraft:iron_chestplate","minecraft:iron_leggings","minecraft:iron_boots"],
@@ -318,7 +318,7 @@
       },
       {
         "id": "diamond_armor",
-        "name": "Алмазная броня",
+        "name": "Diamond armor",
         "rarity": "mythical",
         "noExit": false,
         "recipes": ["minecraft:diamond_helmet","minecraft:diamond_chestplate","minecraft:diamond_leggings","minecraft:diamond_boots"],
@@ -326,7 +326,7 @@
       },
       {
         "id": "golden_armor",
-        "name": "Золотая броня",
+        "name": "Golden armor",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:golden_helmet","minecraft:golden_chestplate","minecraft:golden_leggings","minecraft:golden_boots"],
@@ -334,7 +334,7 @@
       },
       {
         "id": "wood_boats",
-        "name": "Лодки",
+        "name": "Boats",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_boat","minecraft:spruce_boat","minecraft:birch_boat","minecraft:jungle_boat","minecraft:acacia_boat","minecraft:dark_oak_boat","minecraft:cherry_boat","minecraft:mangrove_boat","minecraft:bamboo_raft"],
@@ -342,7 +342,7 @@
       },
       {
         "id": "wood_chest_boats",
-        "name": "Лодки с сундуками",
+        "name": "Boats with chests",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_chest_boat","minecraft:spruce_chest_boat","minecraft:birch_chest_boat","minecraft:jungle_chest_boat","minecraft:acacia_chest_boat","minecraft:dark_oak_chest_boat","minecraft:cherry_chest_boat","minecraft:mangrove_chest_boat","minecraft:bamboo_chest_raft"],
@@ -350,7 +350,7 @@
       },
       {
         "id": "rail_system",
-        "name": "Система рельсов",
+        "name": "Rail system",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:rail","minecraft:powered_rail","minecraft:detector_rail","minecraft:activator_rail","minecraft:minecart","minecraft:chest_minecart","minecraft:furnace_minecart","minecraft:tnt_minecart","minecraft:hopper_minecart"],
@@ -358,7 +358,7 @@
       },
       {
         "id": "wood_logs",
-        "name": "Брёвна",
+        "name": "Logs",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_wood","minecraft:spruce_wood","minecraft:birch_wood","minecraft:jungle_wood","minecraft:acacia_wood","minecraft:dark_oak_wood","minecraft:cherry_wood","minecraft:mangrove_wood","minecraft:bamboo_block","minecraft:crimson_hyphae","minecraft:warped_hyphae"],
@@ -366,7 +366,7 @@
       },
       {
         "id": "stripped_logs",
-        "name": "Очищенные брёвна",
+        "name": "Cleaned logs",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:stripped_oak_wood","minecraft:stripped_spruce_wood","minecraft:stripped_birch_wood","minecraft:stripped_jungle_wood","minecraft:stripped_acacia_wood","minecraft:stripped_dark_oak_wood","minecraft:stripped_cherry_wood","minecraft:stripped_mangrove_wood","minecraft:stripped_crimson_hyphae","minecraft:stripped_warped_hyphae"],
@@ -374,7 +374,7 @@
       },
       {
         "id": "wood_doors_variant",
-        "name": "Двери всех типов",
+        "name": "Doors of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_door","minecraft:spruce_door","minecraft:birch_door","minecraft:jungle_door","minecraft:acacia_door","minecraft:dark_oak_door","minecraft:cherry_door","minecraft:mangrove_door","minecraft:bamboo_door","minecraft:crimson_door","minecraft:warped_door","minecraft:copper_door"],
@@ -382,7 +382,7 @@
       },
       {
         "id": "wood_trapdoors_variant",
-        "name": "Люки всех типов",
+        "name": "Hatches of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_trapdoor","minecraft:spruce_trapdoor","minecraft:birch_trapdoor","minecraft:jungle_trapdoor","minecraft:acacia_trapdoor","minecraft:dark_oak_trapdoor","minecraft:cherry_trapdoor","minecraft:mangrove_trapdoor","minecraft:bamboo_trapdoor","minecraft:crimson_trapdoor","minecraft:warped_trapdoor","minecraft:copper_trapdoor"],
@@ -390,7 +390,7 @@
       },
       {
         "id": "wood_fences_variant",
-        "name": "Заборы всех типов",
+        "name": "Fences of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_fence","minecraft:spruce_fence","minecraft:birch_fence","minecraft:jungle_fence","minecraft:acacia_fence","minecraft:dark_oak_fence","minecraft:cherry_fence","minecraft:mangrove_fence","minecraft:bamboo_fence","minecraft:crimson_fence","minecraft:warped_fence","minecraft:nether_brick_fence"],
@@ -398,7 +398,7 @@
       },
       {
         "id": "wood_fence_gates_variant",
-        "name": "Ворота всех типов",
+        "name": "Gates of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_fence_gate","minecraft:spruce_fence_gate","minecraft:birch_fence_gate","minecraft:jungle_fence_gate","minecraft:acacia_fence_gate","minecraft:dark_oak_fence_gate","minecraft:cherry_fence_gate","minecraft:mangrove_fence_gate","minecraft:bamboo_fence_gate","minecraft:crimson_fence_gate","minecraft:warped_fence_gate"],
@@ -406,7 +406,7 @@
       },
       {
         "id": "wood_buttons_variant",
-        "name": "Кнопки всех типов",
+        "name": "Buttons of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_button","minecraft:spruce_button","minecraft:birch_button","minecraft:jungle_button","minecraft:acacia_button","minecraft:dark_oak_button","minecraft:cherry_button","minecraft:mangrove_button","minecraft:bamboo_button","minecraft:crimson_button","minecraft:warped_button","minecraft:polished_blackstone_button"],
@@ -414,7 +414,7 @@
       },
       {
         "id": "wood_pressure_plates_variant",
-        "name": "Пластины давления всех типов",
+        "name": "Pressure plates of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_pressure_plate","minecraft:spruce_pressure_plate","minecraft:birch_pressure_plate","minecraft:jungle_pressure_plate","minecraft:acacia_pressure_plate","minecraft:dark_oak_pressure_plate","minecraft:cherry_pressure_plate","minecraft:mangrove_pressure_plate","minecraft:bamboo_pressure_plate","minecraft:crimson_pressure_plate","minecraft:warped_pressure_plate","minecraft:polished_blackstone_pressure_plate","minecraft:heavy_weighted_pressure_plate","minecraft:light_weighted_pressure_plate"],
@@ -422,7 +422,7 @@
       },
       {
         "id": "wood_signs_variant",
-        "name": "Таблички всех типов",
+        "name": "Signs of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_sign","minecraft:spruce_sign","minecraft:birch_sign","minecraft:jungle_sign","minecraft:acacia_sign","minecraft:dark_oak_sign","minecraft:cherry_sign","minecraft:mangrove_sign","minecraft:bamboo_sign","minecraft:crimson_sign","minecraft:warped_sign"],
@@ -430,7 +430,7 @@
       },
       {
         "id": "wood_hanging_signs_variant",
-        "name": "Висячие таблички всех типов",
+        "name": "Hanging signs of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_hanging_sign","minecraft:spruce_hanging_sign","minecraft:birch_hanging_sign","minecraft:jungle_hanging_sign","minecraft:acacia_hanging_sign","minecraft:dark_oak_hanging_sign","minecraft:cherry_hanging_sign","minecraft:mangrove_hanging_sign","minecraft:bamboo_hanging_sign","minecraft:crimson_hanging_sign","minecraft:warped_hanging_sign"],
@@ -438,7 +438,7 @@
       },
       {
         "id": "wood_slabs_variant",
-        "name": "Плиты всех типов",
+        "name": "All types of slabs",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_slab","minecraft:spruce_slab","minecraft:birch_slab","minecraft:jungle_slab","minecraft:acacia_slab","minecraft:dark_oak_slab","minecraft:cherry_slab","minecraft:mangrove_slab","minecraft:bamboo_mosaic_slab","minecraft:bamboo_slab","minecraft:crimson_slab","minecraft:warped_slab"],
@@ -446,7 +446,7 @@
       },
       {
         "id": "wood_stairs_variant",
-        "name": "Лестницы всех типов",
+        "name": "Stairs of all types",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:oak_stairs","minecraft:spruce_stairs","minecraft:birch_stairs","minecraft:jungle_stairs","minecraft:acacia_stairs","minecraft:dark_oak_stairs","minecraft:cherry_stairs","minecraft:mangrove_stairs","minecraft:bamboo_mosaic_stairs","minecraft:bamboo_stairs","minecraft:crimson_stairs","minecraft:warped_stairs"],
@@ -454,7 +454,7 @@
       },
       {
         "id": "wood_mosaic",
-        "name": "Бамбуковый мозаик",
+        "name": "Bamboo mosaic",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:bamboo_mosaic"],
@@ -462,7 +462,7 @@
       },
       {
         "id": "stone_blocks_parent",
-        "name": "Каменные блоки",
+        "name": "Stone blocks",
         "rarity": "ultraRare",
         "noExit": "none",
         "recipes": [],
@@ -470,7 +470,7 @@
       },
       {
         "id": "cobblestone_variants",
-        "name": "Булыжник",
+        "name": "Cobblestone",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:cobblestone_slab","minecraft:cobblestone_stairs","minecraft:cobblestone_wall","minecraft:mossy_cobblestone","minecraft:mossy_cobblestone_slab","minecraft:mossy_cobblestone_stairs","minecraft:mossy_cobblestone_wall"],
@@ -478,7 +478,7 @@
       },
       {
         "id": "stone_bricks_variants",
-        "name": "Каменные кирпичи",
+        "name": "Stone bricks",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:stone_bricks","minecraft:stone_brick_slab","minecraft:stone_brick_stairs","minecraft:stone_brick_wall","minecraft:mossy_stone_bricks","minecraft:mossy_stone_brick_slab","minecraft:mossy_stone_brick_stairs","minecraft:mossy_stone_brick_wall","minecraft:chiseled_stone_bricks"],
@@ -486,7 +486,7 @@
       },
       {
         "id": "red_brick_variants",
-        "name": "Красные кирпичи",
+        "name": "Red bricks",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:bricks","minecraft:brick_slab","minecraft:brick_stairs","minecraft:brick_wall"],
@@ -494,7 +494,7 @@
       },
       {
         "id": "smooth_stone_variants",
-        "name": "Гладкий камень",
+        "name": "Smooth stone",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:stone_slab","minecraft:stone_stairs","minecraft:smooth_stone_slab", "minecraft:dripstone_block"],
@@ -502,7 +502,7 @@
       },
       {
         "id": "granite_variants",
-        "name": "Гранит",
+        "name": "Granite",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:granite","minecraft:polished_granite","minecraft:polished_granite_slab","minecraft:polished_granite_stairs"],
@@ -510,7 +510,7 @@
       },
       {
         "id": "diorite_variants",
-        "name": "Диорит",
+        "name": "Diorite",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:diorite","minecraft:polished_diorite","minecraft:polished_diorite_slab","minecraft:polished_diorite_stairs"],
@@ -518,7 +518,7 @@
       },
       {
         "id": "andesite_variants",
-        "name": "Андезит",
+        "name": "Andesite",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:andesite","minecraft:andesite_slab","minecraft:andesite_stairs","minecraft:andesite_wall","minecraft:polished_andesite","minecraft:polished_andesite_slab","minecraft:polished_andesite_stairs"],
@@ -526,7 +526,7 @@
       },
       {
         "id": "deepslate_variants",
-        "name": "Глубинный сланец",
+        "name": "deep shale",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:cobbled_deepslate_slab","minecraft:cobbled_deepslate_stairs","minecraft:cobbled_deepslate_wall","minecraft:polished_deepslate","minecraft:polished_deepslate_slab","minecraft:polished_deepslate_stairs","minecraft:polished_deepslate_wall","minecraft:deepslate_bricks","minecraft:deepslate_brick_slab","minecraft:deepslate_brick_stairs","minecraft:deepslate_brick_wall","minecraft:deepslate_tiles","minecraft:deepslate_tile_slab","minecraft:deepslate_tile_stairs","minecraft:deepslate_tile_wall","minecraft:chiseled_deepslate"],
@@ -534,7 +534,7 @@
       },
       {
         "id": "blackstone_variants",
-        "name": "Чёрный камень",
+        "name": "Black stone",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:blackstone_slab","minecraft:blackstone_stairs","minecraft:blackstone_wall","minecraft:polished_blackstone","minecraft:polished_blackstone_slab","minecraft:polished_blackstone_stairs","minecraft:polished_blackstone_wall","minecraft:polished_blackstone_bricks","minecraft:polished_blackstone_brick_slab","minecraft:polished_blackstone_brick_stairs","minecraft:polished_blackstone_brick_wall","minecraft:chiseled_polished_blackstone"],
@@ -542,7 +542,7 @@
       },
       {
         "id": "nether_brick_variants",
-        "name": "Адские кирпичи",
+        "name": "Hell Bricks",
         "rarity": "rare",
         "noExit": true,
         "recipes": ["minecraft:nether_bricks","minecraft:nether_brick_slab","minecraft:nether_brick_stairs","minecraft:nether_brick_wall","minecraft:red_nether_bricks","minecraft:red_nether_brick_slab","minecraft:red_nether_brick_stairs","minecraft:red_nether_brick_wall","minecraft:chiseled_nether_bricks"],
@@ -550,7 +550,7 @@
       },
       {
         "id": "sandstone_variants",
-        "name": "Песчаник",
+        "name": "Sandstone",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:sandstone","minecraft:sandstone_slab","minecraft:sandstone_stairs","minecraft:sandstone_wall","minecraft:chiseled_sandstone","minecraft:cut_sandstone","minecraft:cut_sandstone_slab","minecraft:smooth_sandstone_slab","minecraft:smooth_sandstone_stairs"],
@@ -558,7 +558,7 @@
       },
       {
         "id": "red_sandstone_variants",
-        "name": "Красный песчаник",
+        "name": "Red Sandstone",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:red_sandstone","minecraft:red_sandstone_slab","minecraft:red_sandstone_stairs","minecraft:red_sandstone_wall","minecraft:chiseled_red_sandstone","minecraft:cut_red_sandstone","minecraft:cut_red_sandstone_slab","minecraft:smooth_red_sandstone_slab","minecraft:smooth_red_sandstone_stairs"],
@@ -566,7 +566,7 @@
       },
       {
         "id": "quartz_variants",
-        "name": "Кварц",
+        "name": "Quartz",
         "rarity": "rare",
         "noExit": true,
         "recipes": ["minecraft:quartz_block","minecraft:quartz_slab","minecraft:quartz_stairs","minecraft:quartz_bricks","minecraft:chiseled_quartz_block","minecraft:quartz_pillar","minecraft:smooth_quartz_slab","minecraft:smooth_quartz_stairs"],
@@ -574,7 +574,7 @@
       },
       {
         "id": "prismarine_variants",
-        "name": "Призмарин",
+        "name": "Prismarin",
         "rarity": "rare",
         "noExit": true,
         "recipes": ["minecraft:prismarine","minecraft:prismarine_slab","minecraft:prismarine_stairs","minecraft:prismarine_wall","minecraft:prismarine_bricks","minecraft:prismarine_brick_slab","minecraft:prismarine_brick_stairs","minecraft:dark_prismarine","minecraft:dark_prismarine_slab","minecraft:dark_prismarine_stairs"],
@@ -582,7 +582,7 @@
       },
       {
         "id": "purpur_variants",
-        "name": "Пурпур",
+        "name": "Purple",
         "rarity": "ultraRare",
         "noExit": true,
         "recipes": ["minecraft:purpur_block","minecraft:purpur_pillar","minecraft:purpur_slab","minecraft:purpur_stairs"],
@@ -590,7 +590,7 @@
       },
       {
         "id": "end_stone_variants",
-        "name": "Камень Края",
+        "name": "End Stone",
         "rarity": "ultraRare",
         "noExit": true,
         "recipes": ["minecraft:end_stone_bricks","minecraft:end_stone_brick_slab","minecraft:end_stone_brick_stairs","minecraft:end_stone_brick_wall"],
@@ -598,7 +598,7 @@
       },
       {
         "id": "tuff_variants",
-        "name": "Туф",
+        "name": "Spit",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:polished_tuff","minecraft:polished_tuff_slab","minecraft:polished_tuff_stairs","minecraft:polished_tuff_wall","minecraft:tuff_bricks","minecraft:tuff_brick_slab","minecraft:tuff_brick_stairs","minecraft:tuff_brick_wall","minecraft:chiseled_tuff","minecraft:chiseled_tuff_bricks","minecraft:tuff_slab","minecraft:tuff_stairs","minecraft:tuff_wall"],
@@ -606,7 +606,7 @@
       },
       {
         "id": "food_parent",
-        "name": "Еда",
+        "name": "Food",
         "rarity": "ultraRare",
         "noExit": "none",
         "recipes": [],
@@ -614,7 +614,7 @@
       },
       {
         "id": "basic_food",
-        "name": "Базовая еда",
+        "name": "Basic food",
         "rarity": "common",
         "noExit": false,
         "recipes": [
@@ -630,7 +630,7 @@
       },
       {
         "id": "golden_food",
-        "name": "Золотая еда",
+        "name": "Golden food",
         "rarity": "rare",
         "noExit": false,
         "recipes": [
@@ -642,7 +642,7 @@
       },
       {
         "id": "food_blocks",
-        "name": "Пищевые блоки",
+        "name": "Food blocks",
         "rarity": "common",
         "noExit": false,
         "recipes": [
@@ -655,7 +655,7 @@
       },
       {
         "id": "mud_brick_variants",
-        "name": "Грязевые кирпичи",
+        "name": "Mud bricks",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:mud_bricks","minecraft:mud_brick_slab","minecraft:mud_brick_stairs","minecraft:mud_brick_wall"],
@@ -663,7 +663,7 @@
       },
       {
         "id": "copper_variants",
-        "name": "Медь",
+        "name": "Copper",
         "rarity": "rare",
         "noExit": true,
         "recipes": ["minecraft:copper_block", "minecraft:copper_trapdoor", "minecraft:copper_door", "minecraft:waxed_copper_trapdoor", "minecraft:waxed_exposed_copper_door", "minecraft:cut_copper","minecraft:cut_copper_slab","minecraft:cut_copper_stairs","minecraft:exposed_copper","minecraft:exposed_cut_copper","minecraft:exposed_cut_copper_slab","minecraft:exposed_cut_copper_stairs","minecraft:weathered_copper","minecraft:weathered_cut_copper","minecraft:weathered_cut_copper_slab","minecraft:weathered_cut_copper_stairs","minecraft:oxidized_copper","minecraft:oxidized_cut_copper","minecraft:oxidized_cut_copper_slab","minecraft:oxidized_cut_copper_stairs","minecraft:waxed_copper_block","minecraft:waxed_cut_copper","minecraft:waxed_cut_copper_slab","minecraft:waxed_cut_copper_stairs","minecraft:waxed_exposed_copper","minecraft:waxed_exposed_cut_copper","minecraft:waxed_exposed_cut_copper_slab","minecraft:waxed_exposed_cut_copper_stairs","minecraft:waxed_weathered_copper","minecraft:waxed_weathered_cut_copper","minecraft:waxed_weathered_cut_copper_slab","minecraft:waxed_weathered_cut_copper_stairs","minecraft:waxed_oxidized_copper","minecraft:waxed_oxidized_cut_copper","minecraft:waxed_oxidized_cut_copper_slab","minecraft:waxed_oxidized_cut_copper_stairs","minecraft:copper_bulb","minecraft:exposed_copper_bulb","minecraft:weathered_copper_bulb","minecraft:oxidized_copper_bulb","minecraft:waxed_copper_bulb","minecraft:waxed_exposed_copper_bulb","minecraft:waxed_weathered_copper_bulb","minecraft:waxed_oxidized_copper_bulb","minecraft:copper_grate","minecraft:exposed_copper_grate","minecraft:weathered_copper_grate","minecraft:oxidized_copper_grate","minecraft:waxed_copper_grate","minecraft:waxed_exposed_copper_grate","minecraft:waxed_weathered_copper_grate","minecraft:waxed_oxidized_copper_grate","minecraft:chiseled_copper","minecraft:exposed_chiseled_copper","minecraft:weathered_chiseled_copper","minecraft:oxidized_chiseled_copper", "minecraft:waxed_copper_door","minecraft:waxed_chiseled_copper","minecraft:waxed_exposed_chiseled_copper","minecraft:waxed_weathered_chiseled_copper","minecraft:waxed_oxidized_chiseled_copper"],
@@ -671,7 +671,7 @@
       },
       {
         "id": "color_blocks_parent",
-        "name": "Цветные блоки",
+        "name": "Color blocks",
         "rarity": "ultraRare",
         "noExit": "none",
         "recipes": [],
@@ -679,7 +679,7 @@
       },
       {
         "id": "wool_colors",
-        "name": "Шерсть",
+        "name": "Wool",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_wool","minecraft:light_gray_wool","minecraft:gray_wool","minecraft:black_wool","minecraft:brown_wool","minecraft:red_wool","minecraft:orange_wool","minecraft:yellow_wool","minecraft:lime_wool","minecraft:green_wool","minecraft:cyan_wool","minecraft:light_blue_wool","minecraft:blue_wool","minecraft:purple_wool","minecraft:magenta_wool","minecraft:pink_wool"],
@@ -687,7 +687,7 @@
       },
       {
         "id": "carpet_colors",
-        "name": "Ковры",
+        "name": "Carpets",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_carpet","minecraft:light_gray_carpet","minecraft:gray_carpet","minecraft:black_carpet","minecraft:brown_carpet","minecraft:red_carpet","minecraft:orange_carpet","minecraft:yellow_carpet","minecraft:lime_carpet","minecraft:green_carpet","minecraft:cyan_carpet","minecraft:light_blue_carpet","minecraft:blue_carpet","minecraft:purple_carpet","minecraft:magenta_carpet","minecraft:pink_carpet","minecraft:moss_carpet"],
@@ -695,7 +695,7 @@
       },
       {
         "id": "bed_colors",
-        "name": "Кровати",
+        "name": "Beds",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_bed","minecraft:light_gray_bed","minecraft:gray_bed","minecraft:black_bed","minecraft:brown_bed","minecraft:red_bed","minecraft:orange_bed","minecraft:yellow_bed","minecraft:lime_bed","minecraft:green_bed","minecraft:cyan_bed","minecraft:light_blue_bed","minecraft:blue_bed","minecraft:purple_bed","minecraft:magenta_bed","minecraft:pink_bed"],
@@ -703,7 +703,7 @@
       },
       {
         "id": "stained_glass_colors",
-        "name": "Цветное стекло",
+        "name": "Colored glass",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_stained_glass","minecraft:light_gray_stained_glass","minecraft:gray_stained_glass","minecraft:black_stained_glass","minecraft:brown_stained_glass","minecraft:red_stained_glass","minecraft:orange_stained_glass","minecraft:yellow_stained_glass","minecraft:lime_stained_glass","minecraft:green_stained_glass","minecraft:cyan_stained_glass","minecraft:light_blue_stained_glass","minecraft:blue_stained_glass","minecraft:purple_stained_glass","minecraft:magenta_stained_glass","minecraft:pink_stained_glass"],
@@ -711,7 +711,7 @@
       },
       {
         "id": "stained_glass_pane_colors",
-        "name": "Стеклянные панели",
+        "name": "Glass panels",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_stained_glass_pane","minecraft:light_gray_stained_glass_pane","minecraft:gray_stained_glass_pane","minecraft:black_stained_glass_pane","minecraft:brown_stained_glass_pane","minecraft:red_stained_glass_pane","minecraft:orange_stained_glass_pane","minecraft:yellow_stained_glass_pane","minecraft:lime_stained_glass_pane","minecraft:green_stained_glass_pane","minecraft:cyan_stained_glass_pane","minecraft:light_blue_stained_glass_pane","minecraft:blue_stained_glass_pane","minecraft:purple_stained_glass_pane","minecraft:magenta_stained_glass_pane","minecraft:pink_stained_glass_pane"],
@@ -719,7 +719,7 @@
       },
       {
         "id": "terracotta_colors",
-        "name": "Терракота",
+        "name": "Terracotta",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_terracotta","minecraft:light_gray_terracotta","minecraft:gray_terracotta","minecraft:black_terracotta","minecraft:brown_terracotta","minecraft:red_terracotta","minecraft:orange_terracotta","minecraft:yellow_terracotta","minecraft:lime_terracotta","minecraft:green_terracotta","minecraft:cyan_terracotta","minecraft:light_blue_terracotta","minecraft:blue_terracotta","minecraft:purple_terracotta","minecraft:magenta_terracotta","minecraft:pink_terracotta"],
@@ -727,7 +727,7 @@
       },
       {
         "id": "banner_colors",
-        "name": "Флаги",
+        "name": "Flags",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_banner","minecraft:light_gray_banner","minecraft:gray_banner","minecraft:black_banner","minecraft:brown_banner","minecraft:red_banner","minecraft:orange_banner","minecraft:yellow_banner","minecraft:lime_banner","minecraft:green_banner","minecraft:cyan_banner","minecraft:light_blue_banner","minecraft:blue_banner","minecraft:purple_banner","minecraft:magenta_banner","minecraft:pink_banner"],
@@ -735,7 +735,7 @@
       },
       {
         "id": "candle_colors",
-        "name": "Свечи",
+        "name": "Candles",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_candle","minecraft:light_gray_candle","minecraft:gray_candle","minecraft:black_candle","minecraft:brown_candle","minecraft:red_candle","minecraft:orange_candle","minecraft:yellow_candle","minecraft:lime_candle","minecraft:green_candle","minecraft:cyan_candle","minecraft:light_blue_candle","minecraft:blue_candle","minecraft:purple_candle","minecraft:magenta_candle","minecraft:pink_candle","minecraft:candle"],
@@ -743,7 +743,7 @@
       },
       {
         "id": "dye_colors",
-        "name": "Красители",
+        "name": "Dyes",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_dye","minecraft:light_gray_dye","minecraft:gray_dye","minecraft:black_dye","minecraft:brown_dye","minecraft:red_dye","minecraft:orange_dye","minecraft:yellow_dye","minecraft:lime_dye","minecraft:green_dye","minecraft:cyan_dye","minecraft:light_blue_dye","minecraft:blue_dye","minecraft:purple_dye","minecraft:magenta_dye","minecraft:pink_dye"],
@@ -751,7 +751,7 @@
       },
       {
         "id": "concrete_powder_colors",
-        "name": "Бетонная смесь",
+        "name": "Concrete mix",
         "rarity": "common",
         "noExit": true,
         "recipes": ["minecraft:white_concrete_powder","minecraft:light_gray_concrete_powder","minecraft:gray_concrete_powder","minecraft:black_concrete_powder","minecraft:brown_concrete_powder","minecraft:red_concrete_powder","minecraft:orange_concrete_powder","minecraft:yellow_concrete_powder","minecraft:lime_concrete_powder","minecraft:green_concrete_powder","minecraft:cyan_concrete_powder","minecraft:light_blue_concrete_powder","minecraft:blue_concrete_powder","minecraft:purple_concrete_powder","minecraft:magenta_concrete_powder","minecraft:pink_concrete_powder"],
@@ -759,7 +759,7 @@
       },
       {
         "id": "redstone_parent",
-        "name": "Редстоун",
+        "name": "Redstone",
         "rarity": "mythical",
         "noExit": "none",
         "recipes": [],
@@ -767,7 +767,7 @@
       },
       {
         "id": "redstone_basics",
-        "name": "Основы редстоуна",
+        "name": "Redstone Basics",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:redstone_torch","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:stone_button"],
@@ -775,7 +775,7 @@
       },
       {
         "id": "redstone_mechanisms",
-        "name": "Механизмы редстоуна",
+        "name": "Redstone mechanisms",
         "rarity": "ultraRare",
         "noExit": false,
         "recipes": ["minecraft:piston","minecraft:sticky_piston","minecraft:dropper","minecraft:dispenser","minecraft:hopper"],
@@ -783,7 +783,7 @@
       },
       {
         "id": "redstone_advanced",
-        "name": "Продвинутый редстоун",
+        "name": "Advanced Redstone",
         "rarity": "mythical",
         "noExit": false,
         "recipes": ["minecraft:target","minecraft:daylight_detector","minecraft:note_block","minecraft:jukebox","minecraft:calibrated_sculk_sensor"],
@@ -791,7 +791,7 @@
       },
       {
         "id": "crafting_parent",
-        "name": "Крафтинг",
+        "name": "Crafting",
         "rarity": "ultraRare",
         "noExit": "none",
         "recipes": [],
@@ -799,7 +799,7 @@
       },
       {
         "id": "crafting_tables",
-        "name": "Столы крафта",
+        "name": "Crafting tables",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:crafting_table","minecraft:stonecutter","minecraft:loom"],
@@ -807,7 +807,7 @@
       },
       {
         "id": "smelting_tables",
-        "name": "Печи и плавка",
+        "name": "Furnaces and smelting",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:furnace","minecraft:blast_furnace","minecraft:smoker"],
@@ -815,7 +815,7 @@
       },
       {
         "id": "enchanting_brewing_parent",
-        "name": "Зачарование и зелья",
+        "name": "Enchantment and Potions",
         "rarity": "ancient",
         "noExit": "none",
         "recipes": [],
@@ -823,7 +823,7 @@
       },
       {
         "id": "enchanting_system",
-        "name": "Система зачарования",
+        "name": "Enchantment system",
         "rarity": "legendary",
         "noExit": false,
         "recipes": ["minecraft:enchanting_table","minecraft:smithing_table"],
@@ -831,7 +831,7 @@
       },
       {
         "id": "brewing_alchemy",
-        "name": "Зельеварение",
+        "name": "Potions",
         "rarity": "legendary",
         "noExit": false,
         "recipes": ["minecraft:brewing_stand","minecraft:cauldron"],
@@ -839,7 +839,7 @@
       },
       {
         "id": "utility_parent",
-        "name": "Утилиты",
+        "name": "Utilities",
         "rarity": "legendary",
         "noExit": "none",
         "recipes": [],
@@ -847,7 +847,7 @@
       },
       {
         "id": "storage_premium",
-        "name": "Хранилище премиум",
+        "name": "Storage premium",
         "rarity": "mythical",
         "noExit": false,
         "recipes": ["minecraft:ender_chest","minecraft:shulker_box"],
@@ -855,7 +855,7 @@
       },
       {
         "id": "storage_special",
-        "name": "Специальное хранилище",
+        "name": "Special storage",
         "rarity": "ultraRare",
         "noExit": false,
         "recipes": ["minecraft:trapped_chest"],
@@ -863,7 +863,7 @@
       },
       {
         "id": "repair_tools",
-        "name": "Инструменты ремонта",
+        "name": "Repair tools",
         "rarity": "ultraRare",
         "noExit": false,
         "recipes": ["minecraft:anvil","minecraft:grindstone"],
@@ -871,7 +871,7 @@
       },
       {
         "id": "special_utilities",
-        "name": "Специальные утилиты",
+        "name": "Special utilities",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:magma_block","minecraft:campfire","minecraft:flower_pot","minecraft:composter","minecraft:decorated_pot","minecraft:iron_bars","minecraft:iron_door","minecraft:iron_trapdoor","minecraft:chain"],
@@ -879,7 +879,7 @@
       },
       {
         "id": "light_sources",
-        "name": "Источники света",
+        "name": "Light sources",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:lantern","minecraft:soul_lantern","minecraft:sea_lantern","minecraft:glowstone","minecraft:soul_torch","minecraft:soul_campfire","minecraft:redstone_lamp","minecraft:end_rod","minecraft:lightning_rod"],
@@ -887,7 +887,7 @@
       },
       {
         "id": "explosives",
-        "name": "Взрывчатка",
+        "name": "Explosives",
         "rarity": "rare",
         "noExit": false,
         "recipes": ["minecraft:tnt","minecraft:firework_rocket","minecraft:fire_charge"],
@@ -895,7 +895,7 @@
       },
       {
         "id": "special_items",
-        "name": "Специальные предметы",
+        "name": "Special items",
         "rarity": "ultraRare",
         "noExit": true,
         "recipes": ["minecraft:netherite_upgrade_smithing_template"],
@@ -903,7 +903,7 @@
       },
       {
         "id": "armor_trim_templates",
-        "name": "Шаблоны отделки",
+        "name": "Clothing templates",
         "rarity": "ultraRare",
         "noExit": true,
         "recipes": ["minecraft:bolt_armor_trim_smithing_template","minecraft:coast_armor_trim_smithing_template","minecraft:dune_armor_trim_smithing_template","minecraft:eye_armor_trim_smithing_template","minecraft:flow_armor_trim_smithing_template","minecraft:host_armor_trim_smithing_template","minecraft:raiser_armor_trim_smithing_template","minecraft:rib_armor_trim_smithing_template","minecraft:sentry_armor_trim_smithing_template","minecraft:shaper_armor_trim_smithing_template","minecraft:silence_armor_trim_smithing_template","minecraft:snout_armor_trim_smithing_template","minecraft:spire_armor_trim_smithing_template","minecraft:tide_armor_trim_smithing_template","minecraft:vex_armor_trim_smithing_template","minecraft:ward_armor_trim_smithing_template","minecraft:wayfinder_armor_trim_smithing_template","minecraft:wild_armor_trim_smithing_template"],
@@ -911,7 +911,7 @@
       },
       {
         "id": "banner_patterns",
-        "name": "Узоры флагов",
+        "name": "Flag patterns",
         "rarity": "rare",
         "noExit": true,
         "recipes": ["minecraft:creeper_banner_pattern","minecraft:flower_banner_pattern","minecraft:skull_banner_pattern","minecraft:mojang_banner_pattern"],

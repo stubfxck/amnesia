@@ -9,7 +9,7 @@
 
 ---
 
-> 🌐 **Also available in:** [Russian](README_ru.md)
+> 🌐 **Так же доступно на:** [Русском](README_ru.md)
 
 ## 📖 Concept
 

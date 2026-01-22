@@ -568,12 +568,6 @@ public class AmneziaMod implements ModInitializer {
                                     player.giveItemStack(scroll);
 
                                     String name = getScrollDataName(randomData);
-                                    
-                                    // ✅ ИСПРАВЛЕНО: Отправляем сообщение ТОЛЬКО админу
-                                    ctx.getSource().sendFeedback(() ->
-                                            Text.literal("✓ Выдан свиток: ").formatted(Formatting.GREEN)
-                                                    .append(Text.literal(name).formatted(getFormattingForRarity(rarity))),
-                                            false); // false = не транслировать всем
 
                                     debug("Gave random " + rarity.getId() + " scroll: " + name);
                                     return 1;
@@ -609,11 +603,6 @@ public class AmneziaMod implements ModInitializer {
                                 ServerPlayerEntity player = ctx.getSource().getPlayerOrThrow();
                                 ItemStack scroll = RecipeScrollItem.createFromScrollData(data, rarity);
                                 player.giveItemStack(scroll);
-
-                                ctx.getSource().sendFeedback(() ->
-                                        Text.literal("✓ Выдан свиток: ").formatted(Formatting.GREEN)
-                                                .append(Text.literal(name).formatted(getFormattingForRarity(rarity))),
-                                        true);
 
                                 debug("Gave " + rarity.getId() + " scroll: " + name);
 

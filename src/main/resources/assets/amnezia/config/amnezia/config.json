@@ -1,7 +1,7 @@
 {
   "_comment": "Amnezia Mod Configuration File",
 
-  "language": "ru_ru",
+  "language": "en_us",
   "_language_comment": "Language for mod messages: 'en_us' for English, 'ru_ru' for Russian. Requires game restart.",
 
   "scrollSettings": {

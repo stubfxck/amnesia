@@ -121,7 +121,7 @@
       {"id": "minecraft:lapis_lazuli", "rarity": "rare"},
       {"id": "minecraft:emerald", "rarity": "rare"},
       {"id": "minecraft:blaze_powder", "rarity": "rare"},
-      {"id": "minecraft:ender_eye", "rarity": "rare"},
+      {"id": "minecraft:ender_eye", "rarity": "ancient"},
       {"id": "minecraft:end_crystal", "rarity": "rare"},
       {"id": "minecraft:diamond", "rarity": "rare"},
       {"id": "minecraft:raw_iron", "rarity": "common"},

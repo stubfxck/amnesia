@@ -1,0 +1,15 @@
+{
+    "required": true,
+    "package": "com.amnezia.mixin",
+    "compatibilityLevel": "JAVA_21",
+    "mixins": [
+        "DeathMixin",
+        "RecipeUnlockMixin"
+    ],
+    "injectors": {
+        "defaultRequire": 1
+    },
+    "overwrites": {
+        "requireAnnotations": true
+    }
+}

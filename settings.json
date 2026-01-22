@@ -1,0 +1,10 @@
+{
+  "cSpell.enabled": false,
+  "cSpell.diagnosticLevel": "off",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.project.referencedLibraries": [],
+  "[java]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "redhat.java"
+  }
+}

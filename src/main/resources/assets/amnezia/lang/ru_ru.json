@@ -1,0 +1,39 @@
+{
+  "rarity.amnezia.common": "Обычный",
+  "rarity.amnezia.rare": "Редкий",
+  "rarity.amnezia.ultrarare": "Ультра редкий",
+  "rarity.amnezia.mythical": "Мифический",
+  "rarity.amnezia.legendary": "Легендарный",
+  "rarity.amnezia.ancient": "Древний",
+
+  "item.amnezia.recipe_scroll": "Свиток рецепта",
+  "item.amnezia.recipe_scroll.common": "Обычный свиток",
+  "item.amnezia.recipe_scroll.rare": "Редкий свиток",
+  "item.amnezia.recipe_scroll.ultrarare": "Ультра редкий свиток",
+  "item.amnezia.recipe_scroll.mythical": "Мифический свиток",
+  "item.amnezia.recipe_scroll.legendary": "Легендарный свиток",
+  "item.amnezia.recipe_scroll.ancient": "Древний свиток",
+
+  "tooltip.amnezia.scroll.group": " §fГруппа: ",
+  "tooltip.amnezia.scroll.recipe": " §fРецепт: ",
+  "tooltip.amnezia.scroll.recipes": " §7Рецептов: ",
+  
+  "message.amnezia.all_recipes_known": "Все рецепты уже известны!",
+  "message.amnezia.already_known": "Уже известно!",
+
+  "command.amnezia.recipes_reset": "✓ Рецепты сброшены",
+  "command.amnezia.recipes_initialized": "✓ Рецепты инициализированы",
+  "command.amnezia.recipes_count": "Известно рецептов: %s",
+  "command.amnezia.config_reloaded": "✓ Конфиги перезагружены",
+  "command.amnezia.config_load_error": "✗ Ошибка загрузки items.json",
+  "command.amnezia.debug_mode": "Режим отладки: %s",
+  "command.amnezia.debug_info": "✓ Информация отладки для %s выведена в консоль",
+
+  "scroll.amnezia.no_items": "✗ Нет предметов для редкости: %s",
+  "scroll.amnezia.issued": "✓ Выдан свиток: ",
+
+  "notification.learned_text": "Изучено:",
+  "notification.learned_text_lower": "изучил:",
+  "notification.learned_ultra_rare_scroll": "изучил ультра редкий свиток:",
+  "notification.learned_ancient_scroll": "изучил древний свиток"
+}

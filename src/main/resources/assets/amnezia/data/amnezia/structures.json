@@ -1,0 +1,304 @@
+{
+  "lootTables": {
+    "chests/village/village_plains_house": {
+      "enabled": true,
+      "chance": 0.6,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_savanna_house": {
+      "enabled": true,
+      "chance": 0.6,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_snowy_house": {
+      "enabled": true,
+      "chance": 0.6,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_taiga_house": {
+      "enabled": true,
+      "chance": 0.6,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_desert_house": {
+      "enabled": true,
+      "chance": 0.6,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_cartographer": {
+      "enabled": true,
+      "chance": 0.4,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/village/village_fletcher": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_mason": {
+      "enabled": true,
+      "chance": 0.4,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_shepherd": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_tannery": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_temple": {
+      "enabled": true,
+      "chance": 0.3,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/village/village_armorer": {
+      "enabled": true,
+      "chance": 0.4,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_butcher": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_weaponsmith": {
+      "enabled": true,
+      "chance": 0.4,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_toolsmith": {
+      "enabled": true,
+      "chance": 0.4,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_fisher": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/village/village_librarian": {
+      "enabled": true,
+      "chance": 0.3,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/village/village_priest": {
+      "enabled": true,
+      "chance": 0.3,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/simple_dungeon": {
+      "enabled": true,
+      "chance": 0.3,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/stronghold_corridor": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/stronghold_crossing": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/stronghold_library": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/abandoned_mineshaft": {
+      "enabled": true,
+      "chance": 0.25,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/buried_treasure": {
+      "enabled": true,
+      "chance": 0.15,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/desert_pyramid": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/jungle_temple": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/jungle_temple_dispenser": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/end_city_treasure": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/igloo_chest": {
+      "enabled": true,
+      "chance": 0.3,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/nether_bridge": {
+      "enabled": true,
+      "chance": 0.15,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/pillager_outpost": {
+      "enabled": true,
+      "chance": 0.25,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/ruined_portal": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/shipwreck_map": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/shipwreck_supply": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/shipwreck_treasure": {
+      "enabled": true,
+      "chance": 0.15,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/underwater_ruin_big": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/underwater_ruin_small": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/woodland_mansion": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/bastion_bridge": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/bastion_hoglin_stable": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/bastion_other": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/bastion_treasure": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/ancient_city": {
+      "enabled": true,
+      "chance": 0.05,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/ancient_city_ice_box": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/trial_chambers/chamber": {
+      "enabled": true,
+      "chance": 0.15,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/trial_chambers/entrance": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/trial_chambers/corridor": {
+      "enabled": true,
+      "chance": 0.2,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/trial_chambers/intersection": {
+      "enabled": true,
+      "chance": 0.15,
+      "minScrolls": 1,
+      "maxScrolls": 1
+    },
+    "chests/trial_chambers/reward": {
+      "enabled": true,
+      "chance": 0.1,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    },
+    "chests/spawn_bonus_chest": {
+      "enabled": true,
+      "chance": 0.5,
+      "minScrolls": 1,
+      "maxScrolls": 2
+    }
+  }
+}

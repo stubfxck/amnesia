@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "amnezia:item/recipe_scroll"
+  }
+}

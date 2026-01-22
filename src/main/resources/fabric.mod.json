@@ -1,0 +1,39 @@
+{
+    "schemaVersion": 1,
+    "id": "amnezia",
+    "version": "${version}",
+    "name": "Amnezia",
+    "description": "Recipe scroll system - learn recipes by finding scrolls in the world!",
+    "authors": [
+        "fxckthisshitman (TG: @fxcksh)"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "CC0-1.0",
+    "icon": "assets/amnezia/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.amnezia.AmneziaMod"
+        ],
+        "client": [
+            "com.amnezia.AmneziaClientMod"
+        ]
+    },
+    "mixins": [
+        "amnezia.mixins.json",
+        {
+            "config": "amnezia.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.18.4",
+        "minecraft": "~1.21.1",
+        "java": ">=21",
+        "fabric-api": "*",
+        "cloth-config": "*"
+    }
+}

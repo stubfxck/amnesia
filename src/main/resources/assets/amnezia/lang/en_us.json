@@ -1,0 +1,39 @@
+{
+  "rarity.amnezia.common": "Common",
+  "rarity.amnezia.rare": "Rare",
+  "rarity.amnezia.ultrarare": "Ultra Rare",
+  "rarity.amnezia.mythical": "Mythical",
+  "rarity.amnezia.legendary": "Legendary",
+  "rarity.amnezia.ancient": "Ancient",
+
+  "item.amnezia.recipe_scroll": "Recipe Scroll",
+  "item.amnezia.recipe_scroll.common": "Common Scroll",
+  "item.amnezia.recipe_scroll.rare": "Rare Scroll",
+  "item.amnezia.recipe_scroll.ultrarare": "Ultra Rare Scroll",
+  "item.amnezia.recipe_scroll.mythical": "Mythical Scroll",
+  "item.amnezia.recipe_scroll.legendary": "Legendary Scroll",
+  "item.amnezia.recipe_scroll.ancient": "Ancient Scroll",
+
+  "tooltip.amnezia.scroll.group": " §fGroup: ",
+  "tooltip.amnezia.scroll.recipe": " §fRecipe: ",
+  "tooltip.amnezia.scroll.recipes": " §7Recipes: ",
+
+  "message.amnezia.all_recipes_known": "All recipes are already known!",
+  "message.amnezia.already_known": "Already known!",
+
+  "command.amnezia.recipes_reset": "✓ Recipes reset",
+  "command.amnezia.recipes_initialized": "✓ Recipes initialized",
+  "command.amnezia.recipes_count": "Known recipes: %s",
+  "command.amnezia.config_reloaded": "✓ Configs reloaded",
+  "command.amnezia.config_load_error": "✗ Error loading items.json",
+  "command.amnezia.debug_mode": "Debug mode: %s",
+  "command.amnezia.debug_info": "✓ Debug info for %s printed to console",
+
+  "scroll.amnezia.no_items": "✗ No items for rarity: %s",
+  "scroll.amnezia.issued": "✓ Issued scroll: ",
+  
+  "notification.learned_text": "Learned:",
+  "notification.learned_text_lower": "learned:",
+  "notification.learned_ultra_rare_scroll": "learned ultra rare scroll:",
+  "notification.learned_ancient_scroll": "learned ancient scroll"
+}

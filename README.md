@@ -9,6 +9,8 @@
 
 ---
 
+> 🌐 **Also available in:** [Russian](README_ru.md)
+
 ## 📖 Concept
 
 Players start with **only basic recipes** (planks, sticks, wooden tools). All other recipes must be **discovered as scrolls** of varying rarity in structure chests throughout the world.

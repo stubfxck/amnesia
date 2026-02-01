@@ -22,15 +22,29 @@ public class NotificationManager {
 
         String colorCode = AmneziaMod.CONFIG.rarityColors.getOrDefault(rarity.getId(), "§e");
         
+        // ✅ НОВОЕ: Скрываем название если это Ancient и включена настройка
+        String displayedItemName = itemName;
+        if (rarity == ConfigLoader.ScrollRarity.ANCIENT && 
+            AmneziaMod.CONFIG != null && 
+            AmneziaMod.CONFIG.scrollSettings != null && 
+            AmneziaMod.CONFIG.scrollSettings.hideAncientRecipeName) {
+            
+            String placeholder = AmneziaMod.CONFIG.scrollSettings.unknownPlaceholder;
+            if (placeholder == null || placeholder.isEmpty()) {
+                placeholder = "§k§k§k§k§k§k§k§k";
+            }
+            displayedItemName = placeholder;
+        }
+        
         return text
                 // Плейсхолдеры игрока
                 .replace("<player>", player.getName().getString())
                 .replace("<player_name>", player.getName().getString())
                 .replace("<player_uuid>", player.getUuidAsString())
                 
-                // Плейсхолдеры предмета
-                .replace("<item_name>", itemName)
-                .replace("<item>", itemName)
+                // Плейсхолдеры предмета (используем скрытое имя если нужно)
+                .replace("<item_name>", displayedItemName)
+                .replace("<item>", displayedItemName)
                 
                 // Плейсхолдеры редкости
                 .replace("<rarity>", getRarityDisplayName(rarity))
@@ -63,10 +77,10 @@ public class NotificationManager {
                 .replace("<learned_ancient_scroll>", Text.translatable("notification.learned_ancient_scroll").getString())
                 .replace("<ancient_scroll_emoji>", "🌟")
                 
-                // Старые форматы (обратная совместимость)
-                .replace("{itemName}", itemName)
+                // Старые форматы (обратная совместимость) - тоже используем скрытое имя
+                .replace("{itemName}", displayedItemName)
+                .replace("%item_name%", displayedItemName)
                 .replace("{rarity}", getRarityDisplayName(rarity))
-                .replace("%item_name%", itemName)
                 .replace("%rarity_color%", colorCode)
                 
                 // Цветовые коды

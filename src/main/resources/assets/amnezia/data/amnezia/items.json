@@ -1,926 +1,2427 @@
 {
-  "_comment": "Amnezia Mod Items Configuration - defines recipes and their rarities for scroll generation",
-  "_meta_comment": "Metadata about the configuration file",
+  "_comment": "Amnezia Mod Items Configuration v2.0 - with modded recipe support",
   "meta": {
-    "version": "1.0.0",
-    "minecraftVersions": ["1.21.1"],
+    "version": "2.0.0",
+    "minecraftVersions": [
+      "1.21.1"
+    ],
     "author": "FXXCKSH",
     "totalUniqueRecipes": 782,
-    "ideas": "Add recipes by workbench for blasting, campfire, smelting, smithing, smoking, stonecutting"
+    "autoGenerateModdedRecipes": true,
+    "moddedRecipesDefaultRarity": "rare"
   },
-
-  "_defaultItems_comment": "Recipes that players can obviously craft from scratch (basic materials)",
-  "defaultItems": {
-    "comment": "Recipes that a player can OBVIOUSLY craft from scratch",
-    "items": [
-      {"id": "minecraft:oak_planks", "rarity": "common"},
-      {"id": "minecraft:spruce_planks", "rarity": "common"},
-      {"id": "minecraft:birch_planks", "rarity": "common"},
-      {"id": "minecraft:jungle_planks", "rarity": "common"},
-      {"id": "minecraft:acacia_planks", "rarity": "common"},
-      {"id": "minecraft:dark_oak_planks", "rarity": "common"},
-      {"id": "minecraft:cherry_planks", "rarity": "common"},
-      {"id": "minecraft:mangrove_planks", "rarity": "common"},
-      {"id": "minecraft:bamboo_planks", "rarity": "common"},
-      {"id": "minecraft:crimson_planks", "rarity": "common"},
-      {"id": "minecraft:warped_planks", "rarity": "common"},
-      {"id": "minecraft:stick", "rarity": "common"},
-      {"id": "minecraft:torch", "rarity": "common"},
-      {"id": "minecraft:wooden_pickaxe", "rarity": "common"},
-      {"id": "minecraft:wooden_axe", "rarity": "common"},
-      {"id": "minecraft:wooden_shovel", "rarity": "common"},
-      {"id": "minecraft:wooden_hoe", "rarity": "common"},
-      {"id": "minecraft:wooden_sword", "rarity": "common"}
-    ]
+  "minecraftRecipes": {
+    "_comment": "All vanilla Minecraft recipes - manually configured",
+    "defaultItems": {
+      "comment": "Recipes that a player can OBVIOUSLY craft from scratch",
+      "items": [
+        {
+          "id": "minecraft:oak_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:spruce_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:birch_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:jungle_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:acacia_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:dark_oak_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:cherry_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:mangrove_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bamboo_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:crimson_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:warped_planks",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:stick",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:torch",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wooden_pickaxe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wooden_axe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wooden_shovel",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wooden_hoe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wooden_sword",
+          "rarity": "common"
+        }
+      ]
+    },
+    "soloItems": {
+      "comment": "Independent items, drop out separately",
+      "items": [
+        {
+          "id": "minecraft:stone_pickaxe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:stone_axe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:stone_shovel",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:stone_hoe",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:coal_block",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:stone_sword",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:iron_pickaxe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_axe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_shovel",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:workbench",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_hoe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_sword",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:diamond_pickaxe",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_axe",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_shovel",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_hoe",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_sword",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:leather_helmet",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:leather_chestplate",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:leather_leggings",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:leather_boots",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:iron_helmet",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:iron_chestplate",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:iron_leggings",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:iron_boots",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:diamond_helmet",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_chestplate",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_leggings",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:diamond_boots",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:golden_axe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_pickaxe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_shovel",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_hoe",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_sword",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_helmet",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_chestplate",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_leggings",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_boots",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:compass",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:clock",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:book",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:writable_book",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lead",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:name_tag",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:saddle",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:painting",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:item_frame",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:glow_item_frame",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:armor_stand",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:fletching_table",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:cartography_table",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:chest",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:barrel",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:ladder",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:scaffolding",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:coal",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bow",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:arrow",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:crossbow",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:fishing_rod",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:shield",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:bucket",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:glass_bottle",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:shears",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:flint_and_steel",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:mace",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:turtle_helmet",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:leather_horse_armor",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:wolf_armor",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:spyglass",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:map",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:recovery_compass",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:lodestone",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:conduit",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:tinted_glass",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:glass_pane",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:brush",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:wind_charge",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:spectral_arrow",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:redstone",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lapis_lazuli",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:emerald",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:blaze_powder",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:ender_eye",
+          "rarity": "ancient"
+        },
+        {
+          "id": "minecraft:end_crystal",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:diamond",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:raw_iron",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:raw_gold",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:raw_copper",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:iron_ingot",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:gold_ingot",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:copper_ingot",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:iron_nugget",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:gold_nugget",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:netherite_ingot",
+          "rarity": "ancient"
+        },
+        {
+          "id": "minecraft:clay",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:paper",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:sugar",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bone_meal",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:slime_ball",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:magma_cream",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:fermented_spider_eye",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:leather",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bowl",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bread",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:wheat",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:cookie",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:melon",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:melon_seeds",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:pumpkin_seeds",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:cake",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:beetroot_soup",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:rabbit_stew",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:mushroom_stew",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:pumpkin_pie",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:honey_bottle",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:glistering_melon_slice",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_carrot",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:golden_apple",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:carrot_on_a_stick",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:dried_kelp",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:hay_block",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:honeycomb_block",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:honey_block",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:slime_block",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:bone_block",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:tripwire_hook",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:crafter",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:observer",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:beehive",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:music_disc_5",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:snow",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:ice",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:blue_ice",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:packed_ice",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:jack_o_lantern",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:warped_fungus_on_a_stick",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:furnace",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:blast_furnace",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:smoker",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:crafting_table",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:stonecutter",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:loom",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:ender_chest",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:shulker_box",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:trapped_chest",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:anvil",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:grindstone",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:enchanting_table",
+          "rarity": "legendary"
+        },
+        {
+          "id": "minecraft:smithing_table",
+          "rarity": "legendary"
+        },
+        {
+          "id": "minecraft:brewing_stand",
+          "rarity": "legendary"
+        },
+        {
+          "id": "minecraft:cauldron",
+          "rarity": "legendary"
+        },
+        {
+          "id": "minecraft:beacon",
+          "rarity": "legendary"
+        },
+        {
+          "id": "minecraft:respawn_anchor",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:bookshelf",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lectern",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:chiseled_bookshelf",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:repeater",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:comparator",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:redstone_torch",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lever",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:stone_button",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:piston",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:sticky_piston",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:dropper",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:dispenser",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:hopper",
+          "rarity": "ultraRare"
+        },
+        {
+          "id": "minecraft:target",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:daylight_detector",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:note_block",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:jukebox",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:calibrated_sculk_sensor",
+          "rarity": "mythical"
+        },
+        {
+          "id": "minecraft:rail",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:powered_rail",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:detector_rail",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:activator_rail",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:minecart",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:chest_minecart",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:furnace_minecart",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:tnt_minecart",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:hopper_minecart",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lantern",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:soul_lantern",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:sea_lantern",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:glowstone",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:soul_torch",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:soul_campfire",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:redstone_lamp",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:end_rod",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:lightning_rod",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:magma_block",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:campfire",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:flower_pot",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:composter",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:decorated_pot",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_bars",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_door",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:iron_trapdoor",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:chain",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:tnt",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:firework_rocket",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:fire_charge",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:polished_basalt",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:nether_wart_block",
+          "rarity": "rare"
+        },
+        {
+          "id": "minecraft:muddy_mangrove_roots",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:packed_mud",
+          "rarity": "common"
+        },
+        {
+          "id": "minecraft:coarse_dirt",
+          "rarity": "common"
+        }
+      ]
+    },
+    "groupedItems": {
+      "comment": "Hierarchy of groups. Parents merge children",
+      "groups": [
+        {
+          "id": "tools_parent",
+          "name": "Tools",
+          "rarity": "legendary",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "stone_tools",
+          "name": "Stone tools",
+          "rarity": "common",
+          "noExit": false,
+          "recipes": [
+            "minecraft:stone_pickaxe",
+            "minecraft:stone_axe",
+            "minecraft:stone_shovel",
+            "minecraft:stone_hoe",
+            "minecraft:stone_sword"
+          ],
+          "requirements": [
+            "tools_parent"
+          ]
+        },
+        {
+          "id": "iron_tools",
+          "name": "Iron tools",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:iron_pickaxe",
+            "minecraft:iron_axe",
+            "minecraft:iron_shovel",
+            "minecraft:iron_hoe",
+            "minecraft:iron_sword"
+          ],
+          "requirements": [
+            "tools_parent"
+          ]
+        },
+        {
+          "id": "diamond_tools",
+          "name": "Diamond tools",
+          "rarity": "mythical",
+          "noExit": false,
+          "recipes": [
+            "minecraft:diamond_pickaxe",
+            "minecraft:diamond_axe",
+            "minecraft:diamond_shovel",
+            "minecraft:diamond_hoe",
+            "minecraft:diamond_sword"
+          ],
+          "requirements": [
+            "tools_parent"
+          ]
+        },
+        {
+          "id": "golden_tools",
+          "name": "Golden tools",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:golden_pickaxe",
+            "minecraft:golden_axe",
+            "minecraft:golden_shovel",
+            "minecraft:golden_hoe",
+            "minecraft:golden_sword"
+          ],
+          "requirements": [
+            "tools_parent"
+          ]
+        },
+        {
+          "id": "armor_parent",
+          "name": "Armor",
+          "rarity": "legendary",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "leather_armor",
+          "name": "Leather armor",
+          "rarity": "common",
+          "noExit": false,
+          "recipes": [
+            "minecraft:leather_helmet",
+            "minecraft:leather_chestplate",
+            "minecraft:leather_leggings",
+            "minecraft:leather_boots"
+          ],
+          "requirements": [
+            "armor_parent"
+          ]
+        },
+        {
+          "id": "iron_armor",
+          "name": "Iron armor",
+          "rarity": "ultraRare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:iron_helmet",
+            "minecraft:iron_chestplate",
+            "minecraft:iron_leggings",
+            "minecraft:iron_boots"
+          ],
+          "requirements": [
+            "armor_parent"
+          ]
+        },
+        {
+          "id": "diamond_armor",
+          "name": "Diamond armor",
+          "rarity": "mythical",
+          "noExit": false,
+          "recipes": [
+            "minecraft:diamond_helmet",
+            "minecraft:diamond_chestplate",
+            "minecraft:diamond_leggings",
+            "minecraft:diamond_boots"
+          ],
+          "requirements": [
+            "armor_parent"
+          ]
+        },
+        {
+          "id": "golden_armor",
+          "name": "Golden armor",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:golden_helmet",
+            "minecraft:golden_chestplate",
+            "minecraft:golden_leggings",
+            "minecraft:golden_boots"
+          ],
+          "requirements": [
+            "armor_parent"
+          ]
+        },
+        {
+          "id": "wood_boats",
+          "name": "Boats",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_boat",
+            "minecraft:spruce_boat",
+            "minecraft:birch_boat",
+            "minecraft:jungle_boat",
+            "minecraft:acacia_boat",
+            "minecraft:dark_oak_boat",
+            "minecraft:cherry_boat",
+            "minecraft:mangrove_boat",
+            "minecraft:bamboo_raft"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_chest_boats",
+          "name": "Boats with chests",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_chest_boat",
+            "minecraft:spruce_chest_boat",
+            "minecraft:birch_chest_boat",
+            "minecraft:jungle_chest_boat",
+            "minecraft:acacia_chest_boat",
+            "minecraft:dark_oak_chest_boat",
+            "minecraft:cherry_chest_boat",
+            "minecraft:mangrove_chest_boat",
+            "minecraft:bamboo_chest_raft"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "rail_system",
+          "name": "Rail system",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:rail",
+            "minecraft:powered_rail",
+            "minecraft:detector_rail",
+            "minecraft:activator_rail",
+            "minecraft:minecart",
+            "minecraft:chest_minecart",
+            "minecraft:furnace_minecart",
+            "minecraft:tnt_minecart",
+            "minecraft:hopper_minecart"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_logs",
+          "name": "Logs",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_wood",
+            "minecraft:spruce_wood",
+            "minecraft:birch_wood",
+            "minecraft:jungle_wood",
+            "minecraft:acacia_wood",
+            "minecraft:dark_oak_wood",
+            "minecraft:cherry_wood",
+            "minecraft:mangrove_wood",
+            "minecraft:bamboo_block",
+            "minecraft:crimson_hyphae",
+            "minecraft:warped_hyphae"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "stripped_logs",
+          "name": "Cleaned logs",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:stripped_oak_wood",
+            "minecraft:stripped_spruce_wood",
+            "minecraft:stripped_birch_wood",
+            "minecraft:stripped_jungle_wood",
+            "minecraft:stripped_acacia_wood",
+            "minecraft:stripped_dark_oak_wood",
+            "minecraft:stripped_cherry_wood",
+            "minecraft:stripped_mangrove_wood",
+            "minecraft:stripped_crimson_hyphae",
+            "minecraft:stripped_warped_hyphae"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_doors_variant",
+          "name": "Doors of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_door",
+            "minecraft:spruce_door",
+            "minecraft:birch_door",
+            "minecraft:jungle_door",
+            "minecraft:acacia_door",
+            "minecraft:dark_oak_door",
+            "minecraft:cherry_door",
+            "minecraft:mangrove_door",
+            "minecraft:bamboo_door",
+            "minecraft:crimson_door",
+            "minecraft:warped_door",
+            "minecraft:copper_door"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_trapdoors_variant",
+          "name": "Hatches of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_trapdoor",
+            "minecraft:spruce_trapdoor",
+            "minecraft:birch_trapdoor",
+            "minecraft:jungle_trapdoor",
+            "minecraft:acacia_trapdoor",
+            "minecraft:dark_oak_trapdoor",
+            "minecraft:cherry_trapdoor",
+            "minecraft:mangrove_trapdoor",
+            "minecraft:bamboo_trapdoor",
+            "minecraft:crimson_trapdoor",
+            "minecraft:warped_trapdoor",
+            "minecraft:copper_trapdoor"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_fences_variant",
+          "name": "Fences of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_fence",
+            "minecraft:spruce_fence",
+            "minecraft:birch_fence",
+            "minecraft:jungle_fence",
+            "minecraft:acacia_fence",
+            "minecraft:dark_oak_fence",
+            "minecraft:cherry_fence",
+            "minecraft:mangrove_fence",
+            "minecraft:bamboo_fence",
+            "minecraft:crimson_fence",
+            "minecraft:warped_fence",
+            "minecraft:nether_brick_fence"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_fence_gates_variant",
+          "name": "Gates of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_fence_gate",
+            "minecraft:spruce_fence_gate",
+            "minecraft:birch_fence_gate",
+            "minecraft:jungle_fence_gate",
+            "minecraft:acacia_fence_gate",
+            "minecraft:dark_oak_fence_gate",
+            "minecraft:cherry_fence_gate",
+            "minecraft:mangrove_fence_gate",
+            "minecraft:bamboo_fence_gate",
+            "minecraft:crimson_fence_gate",
+            "minecraft:warped_fence_gate"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_buttons_variant",
+          "name": "Buttons of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_button",
+            "minecraft:spruce_button",
+            "minecraft:birch_button",
+            "minecraft:jungle_button",
+            "minecraft:acacia_button",
+            "minecraft:dark_oak_button",
+            "minecraft:cherry_button",
+            "minecraft:mangrove_button",
+            "minecraft:bamboo_button",
+            "minecraft:crimson_button",
+            "minecraft:warped_button",
+            "minecraft:polished_blackstone_button"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_pressure_plates_variant",
+          "name": "Pressure plates of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_pressure_plate",
+            "minecraft:spruce_pressure_plate",
+            "minecraft:birch_pressure_plate",
+            "minecraft:jungle_pressure_plate",
+            "minecraft:acacia_pressure_plate",
+            "minecraft:dark_oak_pressure_plate",
+            "minecraft:cherry_pressure_plate",
+            "minecraft:mangrove_pressure_plate",
+            "minecraft:bamboo_pressure_plate",
+            "minecraft:crimson_pressure_plate",
+            "minecraft:warped_pressure_plate",
+            "minecraft:polished_blackstone_pressure_plate",
+            "minecraft:heavy_weighted_pressure_plate",
+            "minecraft:light_weighted_pressure_plate"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_signs_variant",
+          "name": "Signs of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_sign",
+            "minecraft:spruce_sign",
+            "minecraft:birch_sign",
+            "minecraft:jungle_sign",
+            "minecraft:acacia_sign",
+            "minecraft:dark_oak_sign",
+            "minecraft:cherry_sign",
+            "minecraft:mangrove_sign",
+            "minecraft:bamboo_sign",
+            "minecraft:crimson_sign",
+            "minecraft:warped_sign"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_hanging_signs_variant",
+          "name": "Hanging signs of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_hanging_sign",
+            "minecraft:spruce_hanging_sign",
+            "minecraft:birch_hanging_sign",
+            "minecraft:jungle_hanging_sign",
+            "minecraft:acacia_hanging_sign",
+            "minecraft:dark_oak_hanging_sign",
+            "minecraft:cherry_hanging_sign",
+            "minecraft:mangrove_hanging_sign",
+            "minecraft:bamboo_hanging_sign",
+            "minecraft:crimson_hanging_sign",
+            "minecraft:warped_hanging_sign"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_slabs_variant",
+          "name": "All types of slabs",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_slab",
+            "minecraft:spruce_slab",
+            "minecraft:birch_slab",
+            "minecraft:jungle_slab",
+            "minecraft:acacia_slab",
+            "minecraft:dark_oak_slab",
+            "minecraft:cherry_slab",
+            "minecraft:mangrove_slab",
+            "minecraft:bamboo_mosaic_slab",
+            "minecraft:bamboo_slab",
+            "minecraft:crimson_slab",
+            "minecraft:warped_slab"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_stairs_variant",
+          "name": "Stairs of all types",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:oak_stairs",
+            "minecraft:spruce_stairs",
+            "minecraft:birch_stairs",
+            "minecraft:jungle_stairs",
+            "minecraft:acacia_stairs",
+            "minecraft:dark_oak_stairs",
+            "minecraft:cherry_stairs",
+            "minecraft:mangrove_stairs",
+            "minecraft:bamboo_mosaic_stairs",
+            "minecraft:bamboo_stairs",
+            "minecraft:crimson_stairs",
+            "minecraft:warped_stairs"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "wood_mosaic",
+          "name": "Bamboo mosaic",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:bamboo_mosaic"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "stone_blocks_parent",
+          "name": "Stone blocks",
+          "rarity": "ultraRare",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "cobblestone_variants",
+          "name": "Cobblestone",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:cobblestone_slab",
+            "minecraft:cobblestone_stairs",
+            "minecraft:cobblestone_wall",
+            "minecraft:mossy_cobblestone",
+            "minecraft:mossy_cobblestone_slab",
+            "minecraft:mossy_cobblestone_stairs",
+            "minecraft:mossy_cobblestone_wall"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "stone_bricks_variants",
+          "name": "Stone bricks",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:stone_bricks",
+            "minecraft:stone_brick_slab",
+            "minecraft:stone_brick_stairs",
+            "minecraft:stone_brick_wall",
+            "minecraft:mossy_stone_bricks",
+            "minecraft:mossy_stone_brick_slab",
+            "minecraft:mossy_stone_brick_stairs",
+            "minecraft:mossy_stone_brick_wall",
+            "minecraft:chiseled_stone_bricks"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "red_brick_variants",
+          "name": "Red bricks",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:bricks",
+            "minecraft:brick_slab",
+            "minecraft:brick_stairs",
+            "minecraft:brick_wall"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "smooth_stone_variants",
+          "name": "Smooth stone",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:stone_slab",
+            "minecraft:stone_stairs",
+            "minecraft:smooth_stone_slab",
+            "minecraft:dripstone_block"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "granite_variants",
+          "name": "Granite",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:granite",
+            "minecraft:polished_granite",
+            "minecraft:polished_granite_slab",
+            "minecraft:polished_granite_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "diorite_variants",
+          "name": "Diorite",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:diorite",
+            "minecraft:polished_diorite",
+            "minecraft:polished_diorite_slab",
+            "minecraft:polished_diorite_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "andesite_variants",
+          "name": "Andesite",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:andesite",
+            "minecraft:andesite_slab",
+            "minecraft:andesite_stairs",
+            "minecraft:andesite_wall",
+            "minecraft:polished_andesite",
+            "minecraft:polished_andesite_slab",
+            "minecraft:polished_andesite_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "deepslate_variants",
+          "name": "deep shale",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:cobbled_deepslate_slab",
+            "minecraft:cobbled_deepslate_stairs",
+            "minecraft:cobbled_deepslate_wall",
+            "minecraft:polished_deepslate",
+            "minecraft:polished_deepslate_slab",
+            "minecraft:polished_deepslate_stairs",
+            "minecraft:polished_deepslate_wall",
+            "minecraft:deepslate_bricks",
+            "minecraft:deepslate_brick_slab",
+            "minecraft:deepslate_brick_stairs",
+            "minecraft:deepslate_brick_wall",
+            "minecraft:deepslate_tiles",
+            "minecraft:deepslate_tile_slab",
+            "minecraft:deepslate_tile_stairs",
+            "minecraft:deepslate_tile_wall",
+            "minecraft:chiseled_deepslate"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "blackstone_variants",
+          "name": "Black stone",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:blackstone_slab",
+            "minecraft:blackstone_stairs",
+            "minecraft:blackstone_wall",
+            "minecraft:polished_blackstone",
+            "minecraft:polished_blackstone_slab",
+            "minecraft:polished_blackstone_stairs",
+            "minecraft:polished_blackstone_wall",
+            "minecraft:polished_blackstone_bricks",
+            "minecraft:polished_blackstone_brick_slab",
+            "minecraft:polished_blackstone_brick_stairs",
+            "minecraft:polished_blackstone_brick_wall",
+            "minecraft:chiseled_polished_blackstone"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "nether_brick_variants",
+          "name": "Hell Bricks",
+          "rarity": "rare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:nether_bricks",
+            "minecraft:nether_brick_slab",
+            "minecraft:nether_brick_stairs",
+            "minecraft:nether_brick_wall",
+            "minecraft:red_nether_bricks",
+            "minecraft:red_nether_brick_slab",
+            "minecraft:red_nether_brick_stairs",
+            "minecraft:red_nether_brick_wall",
+            "minecraft:chiseled_nether_bricks"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "sandstone_variants",
+          "name": "Sandstone",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:sandstone",
+            "minecraft:sandstone_slab",
+            "minecraft:sandstone_stairs",
+            "minecraft:sandstone_wall",
+            "minecraft:chiseled_sandstone",
+            "minecraft:cut_sandstone",
+            "minecraft:cut_sandstone_slab",
+            "minecraft:smooth_sandstone_slab",
+            "minecraft:smooth_sandstone_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "red_sandstone_variants",
+          "name": "Red Sandstone",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:red_sandstone",
+            "minecraft:red_sandstone_slab",
+            "minecraft:red_sandstone_stairs",
+            "minecraft:red_sandstone_wall",
+            "minecraft:chiseled_red_sandstone",
+            "minecraft:cut_red_sandstone",
+            "minecraft:cut_red_sandstone_slab",
+            "minecraft:smooth_red_sandstone_slab",
+            "minecraft:smooth_red_sandstone_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "quartz_variants",
+          "name": "Quartz",
+          "rarity": "rare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:quartz_block",
+            "minecraft:quartz_slab",
+            "minecraft:quartz_stairs",
+            "minecraft:quartz_bricks",
+            "minecraft:chiseled_quartz_block",
+            "minecraft:quartz_pillar",
+            "minecraft:smooth_quartz_slab",
+            "minecraft:smooth_quartz_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "prismarine_variants",
+          "name": "Prismarin",
+          "rarity": "rare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:prismarine",
+            "minecraft:prismarine_slab",
+            "minecraft:prismarine_stairs",
+            "minecraft:prismarine_wall",
+            "minecraft:prismarine_bricks",
+            "minecraft:prismarine_brick_slab",
+            "minecraft:prismarine_brick_stairs",
+            "minecraft:dark_prismarine",
+            "minecraft:dark_prismarine_slab",
+            "minecraft:dark_prismarine_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "purpur_variants",
+          "name": "Purple",
+          "rarity": "ultraRare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:purpur_block",
+            "minecraft:purpur_pillar",
+            "minecraft:purpur_slab",
+            "minecraft:purpur_stairs"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "end_stone_variants",
+          "name": "End Stone",
+          "rarity": "ultraRare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:end_stone_bricks",
+            "minecraft:end_stone_brick_slab",
+            "minecraft:end_stone_brick_stairs",
+            "minecraft:end_stone_brick_wall"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "tuff_variants",
+          "name": "Spit",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:polished_tuff",
+            "minecraft:polished_tuff_slab",
+            "minecraft:polished_tuff_stairs",
+            "minecraft:polished_tuff_wall",
+            "minecraft:tuff_bricks",
+            "minecraft:tuff_brick_slab",
+            "minecraft:tuff_brick_stairs",
+            "minecraft:tuff_brick_wall",
+            "minecraft:chiseled_tuff",
+            "minecraft:chiseled_tuff_bricks",
+            "minecraft:tuff_slab",
+            "minecraft:tuff_stairs",
+            "minecraft:tuff_wall"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "food_parent",
+          "name": "Food",
+          "rarity": "ultraRare",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "basic_food",
+          "name": "Basic food",
+          "rarity": "common",
+          "noExit": false,
+          "recipes": [
+            "minecraft:bread",
+            "minecraft:cookie",
+            "minecraft:cake",
+            "minecraft:pumpkin_pie",
+            "minecraft:beetroot_soup",
+            "minecraft:rabbit_stew",
+            "minecraft:mushroom_stew"
+          ],
+          "requirements": [
+            "food_parent"
+          ]
+        },
+        {
+          "id": "golden_food",
+          "name": "Golden food",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:golden_apple",
+            "minecraft:golden_carrot",
+            "minecraft:glistering_melon_slice"
+          ],
+          "requirements": [
+            "food_parent"
+          ]
+        },
+        {
+          "id": "food_blocks",
+          "name": "Food blocks",
+          "rarity": "common",
+          "noExit": false,
+          "recipes": [
+            "minecraft:hay_block",
+            "minecraft:dried_kelp_block",
+            "minecraft:honeycomb_block",
+            "minecraft:honey_block"
+          ],
+          "requirements": [
+            "food_parent"
+          ]
+        },
+        {
+          "id": "mud_brick_variants",
+          "name": "Mud bricks",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:mud_bricks",
+            "minecraft:mud_brick_slab",
+            "minecraft:mud_brick_stairs",
+            "minecraft:mud_brick_wall"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "copper_variants",
+          "name": "Copper",
+          "rarity": "rare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:copper_block",
+            "minecraft:copper_trapdoor",
+            "minecraft:copper_door",
+            "minecraft:waxed_copper_trapdoor",
+            "minecraft:waxed_exposed_copper_door",
+            "minecraft:cut_copper",
+            "minecraft:cut_copper_slab",
+            "minecraft:cut_copper_stairs",
+            "minecraft:exposed_copper",
+            "minecraft:exposed_cut_copper",
+            "minecraft:exposed_cut_copper_slab",
+            "minecraft:exposed_cut_copper_stairs",
+            "minecraft:weathered_copper",
+            "minecraft:weathered_cut_copper",
+            "minecraft:weathered_cut_copper_slab",
+            "minecraft:weathered_cut_copper_stairs",
+            "minecraft:oxidized_copper",
+            "minecraft:oxidized_cut_copper",
+            "minecraft:oxidized_cut_copper_slab",
+            "minecraft:oxidized_cut_copper_stairs",
+            "minecraft:waxed_copper_block",
+            "minecraft:waxed_cut_copper",
+            "minecraft:waxed_cut_copper_slab",
+            "minecraft:waxed_cut_copper_stairs",
+            "minecraft:waxed_exposed_copper",
+            "minecraft:waxed_exposed_cut_copper",
+            "minecraft:waxed_exposed_cut_copper_slab",
+            "minecraft:waxed_exposed_cut_copper_stairs",
+            "minecraft:waxed_weathered_copper",
+            "minecraft:waxed_weathered_cut_copper",
+            "minecraft:waxed_weathered_cut_copper_slab",
+            "minecraft:waxed_weathered_cut_copper_stairs",
+            "minecraft:waxed_oxidized_copper",
+            "minecraft:waxed_oxidized_cut_copper",
+            "minecraft:waxed_oxidized_cut_copper_slab",
+            "minecraft:waxed_oxidized_cut_copper_stairs",
+            "minecraft:copper_bulb",
+            "minecraft:exposed_copper_bulb",
+            "minecraft:weathered_copper_bulb",
+            "minecraft:oxidized_copper_bulb",
+            "minecraft:waxed_copper_bulb",
+            "minecraft:waxed_exposed_copper_bulb",
+            "minecraft:waxed_weathered_copper_bulb",
+            "minecraft:waxed_oxidized_copper_bulb",
+            "minecraft:copper_grate",
+            "minecraft:exposed_copper_grate",
+            "minecraft:weathered_copper_grate",
+            "minecraft:oxidized_copper_grate",
+            "minecraft:waxed_copper_grate",
+            "minecraft:waxed_exposed_copper_grate",
+            "minecraft:waxed_weathered_copper_grate",
+            "minecraft:waxed_oxidized_copper_grate",
+            "minecraft:chiseled_copper",
+            "minecraft:exposed_chiseled_copper",
+            "minecraft:weathered_chiseled_copper",
+            "minecraft:oxidized_chiseled_copper",
+            "minecraft:waxed_copper_door",
+            "minecraft:waxed_chiseled_copper",
+            "minecraft:waxed_exposed_chiseled_copper",
+            "minecraft:waxed_weathered_chiseled_copper",
+            "minecraft:waxed_oxidized_chiseled_copper"
+          ],
+          "requirements": [
+            "stone_blocks_parent"
+          ]
+        },
+        {
+          "id": "color_blocks_parent",
+          "name": "Color blocks",
+          "rarity": "ultraRare",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "wool_colors",
+          "name": "Wool",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_wool",
+            "minecraft:light_gray_wool",
+            "minecraft:gray_wool",
+            "minecraft:black_wool",
+            "minecraft:brown_wool",
+            "minecraft:red_wool",
+            "minecraft:orange_wool",
+            "minecraft:yellow_wool",
+            "minecraft:lime_wool",
+            "minecraft:green_wool",
+            "minecraft:cyan_wool",
+            "minecraft:light_blue_wool",
+            "minecraft:blue_wool",
+            "minecraft:purple_wool",
+            "minecraft:magenta_wool",
+            "minecraft:pink_wool"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "carpet_colors",
+          "name": "Carpets",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_carpet",
+            "minecraft:light_gray_carpet",
+            "minecraft:gray_carpet",
+            "minecraft:black_carpet",
+            "minecraft:brown_carpet",
+            "minecraft:red_carpet",
+            "minecraft:orange_carpet",
+            "minecraft:yellow_carpet",
+            "minecraft:lime_carpet",
+            "minecraft:green_carpet",
+            "minecraft:cyan_carpet",
+            "minecraft:light_blue_carpet",
+            "minecraft:blue_carpet",
+            "minecraft:purple_carpet",
+            "minecraft:magenta_carpet",
+            "minecraft:pink_carpet",
+            "minecraft:moss_carpet"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "bed_colors",
+          "name": "Beds",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_bed",
+            "minecraft:light_gray_bed",
+            "minecraft:gray_bed",
+            "minecraft:black_bed",
+            "minecraft:brown_bed",
+            "minecraft:red_bed",
+            "minecraft:orange_bed",
+            "minecraft:yellow_bed",
+            "minecraft:lime_bed",
+            "minecraft:green_bed",
+            "minecraft:cyan_bed",
+            "minecraft:light_blue_bed",
+            "minecraft:blue_bed",
+            "minecraft:purple_bed",
+            "minecraft:magenta_bed",
+            "minecraft:pink_bed"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "stained_glass_colors",
+          "name": "Colored glass",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_stained_glass",
+            "minecraft:light_gray_stained_glass",
+            "minecraft:gray_stained_glass",
+            "minecraft:black_stained_glass",
+            "minecraft:brown_stained_glass",
+            "minecraft:red_stained_glass",
+            "minecraft:orange_stained_glass",
+            "minecraft:yellow_stained_glass",
+            "minecraft:lime_stained_glass",
+            "minecraft:green_stained_glass",
+            "minecraft:cyan_stained_glass",
+            "minecraft:light_blue_stained_glass",
+            "minecraft:blue_stained_glass",
+            "minecraft:purple_stained_glass",
+            "minecraft:magenta_stained_glass",
+            "minecraft:pink_stained_glass"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "stained_glass_pane_colors",
+          "name": "Glass panels",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_stained_glass_pane",
+            "minecraft:light_gray_stained_glass_pane",
+            "minecraft:gray_stained_glass_pane",
+            "minecraft:black_stained_glass_pane",
+            "minecraft:brown_stained_glass_pane",
+            "minecraft:red_stained_glass_pane",
+            "minecraft:orange_stained_glass_pane",
+            "minecraft:yellow_stained_glass_pane",
+            "minecraft:lime_stained_glass_pane",
+            "minecraft:green_stained_glass_pane",
+            "minecraft:cyan_stained_glass_pane",
+            "minecraft:light_blue_stained_glass_pane",
+            "minecraft:blue_stained_glass_pane",
+            "minecraft:purple_stained_glass_pane",
+            "minecraft:magenta_stained_glass_pane",
+            "minecraft:pink_stained_glass_pane"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "terracotta_colors",
+          "name": "Terracotta",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_terracotta",
+            "minecraft:light_gray_terracotta",
+            "minecraft:gray_terracotta",
+            "minecraft:black_terracotta",
+            "minecraft:brown_terracotta",
+            "minecraft:red_terracotta",
+            "minecraft:orange_terracotta",
+            "minecraft:yellow_terracotta",
+            "minecraft:lime_terracotta",
+            "minecraft:green_terracotta",
+            "minecraft:cyan_terracotta",
+            "minecraft:light_blue_terracotta",
+            "minecraft:blue_terracotta",
+            "minecraft:purple_terracotta",
+            "minecraft:magenta_terracotta",
+            "minecraft:pink_terracotta"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "banner_colors",
+          "name": "Flags",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_banner",
+            "minecraft:light_gray_banner",
+            "minecraft:gray_banner",
+            "minecraft:black_banner",
+            "minecraft:brown_banner",
+            "minecraft:red_banner",
+            "minecraft:orange_banner",
+            "minecraft:yellow_banner",
+            "minecraft:lime_banner",
+            "minecraft:green_banner",
+            "minecraft:cyan_banner",
+            "minecraft:light_blue_banner",
+            "minecraft:blue_banner",
+            "minecraft:purple_banner",
+            "minecraft:magenta_banner",
+            "minecraft:pink_banner"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "candle_colors",
+          "name": "Candles",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_candle",
+            "minecraft:light_gray_candle",
+            "minecraft:gray_candle",
+            "minecraft:black_candle",
+            "minecraft:brown_candle",
+            "minecraft:red_candle",
+            "minecraft:orange_candle",
+            "minecraft:yellow_candle",
+            "minecraft:lime_candle",
+            "minecraft:green_candle",
+            "minecraft:cyan_candle",
+            "minecraft:light_blue_candle",
+            "minecraft:blue_candle",
+            "minecraft:purple_candle",
+            "minecraft:magenta_candle",
+            "minecraft:pink_candle",
+            "minecraft:candle"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "dye_colors",
+          "name": "Dyes",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_dye",
+            "minecraft:light_gray_dye",
+            "minecraft:gray_dye",
+            "minecraft:black_dye",
+            "minecraft:brown_dye",
+            "minecraft:red_dye",
+            "minecraft:orange_dye",
+            "minecraft:yellow_dye",
+            "minecraft:lime_dye",
+            "minecraft:green_dye",
+            "minecraft:cyan_dye",
+            "minecraft:light_blue_dye",
+            "minecraft:blue_dye",
+            "minecraft:purple_dye",
+            "minecraft:magenta_dye",
+            "minecraft:pink_dye"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "concrete_powder_colors",
+          "name": "Concrete mix",
+          "rarity": "common",
+          "noExit": true,
+          "recipes": [
+            "minecraft:white_concrete_powder",
+            "minecraft:light_gray_concrete_powder",
+            "minecraft:gray_concrete_powder",
+            "minecraft:black_concrete_powder",
+            "minecraft:brown_concrete_powder",
+            "minecraft:red_concrete_powder",
+            "minecraft:orange_concrete_powder",
+            "minecraft:yellow_concrete_powder",
+            "minecraft:lime_concrete_powder",
+            "minecraft:green_concrete_powder",
+            "minecraft:cyan_concrete_powder",
+            "minecraft:light_blue_concrete_powder",
+            "minecraft:blue_concrete_powder",
+            "minecraft:purple_concrete_powder",
+            "minecraft:magenta_concrete_powder",
+            "minecraft:pink_concrete_powder"
+          ],
+          "requirements": [
+            "color_blocks_parent"
+          ]
+        },
+        {
+          "id": "redstone_parent",
+          "name": "Redstone",
+          "rarity": "mythical",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "redstone_basics",
+          "name": "Redstone Basics",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:redstone_torch",
+            "minecraft:repeater",
+            "minecraft:comparator",
+            "minecraft:lever",
+            "minecraft:stone_button"
+          ],
+          "requirements": [
+            "redstone_parent"
+          ]
+        },
+        {
+          "id": "redstone_mechanisms",
+          "name": "Redstone mechanisms",
+          "rarity": "ultraRare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:piston",
+            "minecraft:sticky_piston",
+            "minecraft:dropper",
+            "minecraft:dispenser",
+            "minecraft:hopper"
+          ],
+          "requirements": [
+            "redstone_parent"
+          ]
+        },
+        {
+          "id": "redstone_advanced",
+          "name": "Advanced Redstone",
+          "rarity": "mythical",
+          "noExit": false,
+          "recipes": [
+            "minecraft:target",
+            "minecraft:daylight_detector",
+            "minecraft:note_block",
+            "minecraft:jukebox",
+            "minecraft:calibrated_sculk_sensor"
+          ],
+          "requirements": [
+            "redstone_parent"
+          ]
+        },
+        {
+          "id": "crafting_parent",
+          "name": "Crafting",
+          "rarity": "ultraRare",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "crafting_tables",
+          "name": "Crafting tables",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:crafting_table",
+            "minecraft:stonecutter",
+            "minecraft:loom"
+          ],
+          "requirements": [
+            "crafting_parent"
+          ]
+        },
+        {
+          "id": "smelting_tables",
+          "name": "Furnaces and smelting",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:furnace",
+            "minecraft:blast_furnace",
+            "minecraft:smoker"
+          ],
+          "requirements": [
+            "crafting_parent"
+          ]
+        },
+        {
+          "id": "enchanting_brewing_parent",
+          "name": "Enchantment and Potions",
+          "rarity": "ancient",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "enchanting_system",
+          "name": "Enchantment system",
+          "rarity": "legendary",
+          "noExit": false,
+          "recipes": [
+            "minecraft:enchanting_table",
+            "minecraft:smithing_table"
+          ],
+          "requirements": [
+            "enchanting_brewing_parent"
+          ]
+        },
+        {
+          "id": "brewing_alchemy",
+          "name": "Potions",
+          "rarity": "legendary",
+          "noExit": false,
+          "recipes": [
+            "minecraft:brewing_stand",
+            "minecraft:cauldron"
+          ],
+          "requirements": [
+            "enchanting_brewing_parent"
+          ]
+        },
+        {
+          "id": "utility_parent",
+          "name": "Utilities",
+          "rarity": "legendary",
+          "noExit": "none",
+          "recipes": [],
+          "requirements": []
+        },
+        {
+          "id": "storage_premium",
+          "name": "Storage premium",
+          "rarity": "mythical",
+          "noExit": false,
+          "recipes": [
+            "minecraft:ender_chest",
+            "minecraft:shulker_box"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "storage_special",
+          "name": "Special storage",
+          "rarity": "ultraRare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:trapped_chest"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "repair_tools",
+          "name": "Repair tools",
+          "rarity": "ultraRare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:anvil",
+            "minecraft:grindstone"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "special_utilities",
+          "name": "Special utilities",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:magma_block",
+            "minecraft:campfire",
+            "minecraft:flower_pot",
+            "minecraft:composter",
+            "minecraft:decorated_pot",
+            "minecraft:iron_bars",
+            "minecraft:iron_door",
+            "minecraft:iron_trapdoor",
+            "minecraft:chain"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "light_sources",
+          "name": "Light sources",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:lantern",
+            "minecraft:soul_lantern",
+            "minecraft:sea_lantern",
+            "minecraft:glowstone",
+            "minecraft:soul_torch",
+            "minecraft:soul_campfire",
+            "minecraft:redstone_lamp",
+            "minecraft:end_rod",
+            "minecraft:lightning_rod"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "explosives",
+          "name": "Explosives",
+          "rarity": "rare",
+          "noExit": false,
+          "recipes": [
+            "minecraft:tnt",
+            "minecraft:firework_rocket",
+            "minecraft:fire_charge"
+          ],
+          "requirements": [
+            "utility_parent"
+          ]
+        },
+        {
+          "id": "special_items",
+          "name": "Special items",
+          "rarity": "ultraRare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:netherite_upgrade_smithing_template"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "armor_trim_templates",
+          "name": "Clothing templates",
+          "rarity": "ultraRare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:bolt_armor_trim_smithing_template",
+            "minecraft:coast_armor_trim_smithing_template",
+            "minecraft:dune_armor_trim_smithing_template",
+            "minecraft:eye_armor_trim_smithing_template",
+            "minecraft:flow_armor_trim_smithing_template",
+            "minecraft:host_armor_trim_smithing_template",
+            "minecraft:raiser_armor_trim_smithing_template",
+            "minecraft:rib_armor_trim_smithing_template",
+            "minecraft:sentry_armor_trim_smithing_template",
+            "minecraft:shaper_armor_trim_smithing_template",
+            "minecraft:silence_armor_trim_smithing_template",
+            "minecraft:snout_armor_trim_smithing_template",
+            "minecraft:spire_armor_trim_smithing_template",
+            "minecraft:tide_armor_trim_smithing_template",
+            "minecraft:vex_armor_trim_smithing_template",
+            "minecraft:ward_armor_trim_smithing_template",
+            "minecraft:wayfinder_armor_trim_smithing_template",
+            "minecraft:wild_armor_trim_smithing_template"
+          ],
+          "requirements": []
+        },
+        {
+          "id": "banner_patterns",
+          "name": "Flag patterns",
+          "rarity": "rare",
+          "noExit": true,
+          "recipes": [
+            "minecraft:creeper_banner_pattern",
+            "minecraft:flower_banner_pattern",
+            "minecraft:skull_banner_pattern",
+            "minecraft:mojang_banner_pattern"
+          ],
+          "requirements": []
+        }
+      ]
+    }
   },
-
-  "_soloItems_comment": "Individual items that can be learned separately (tools, armor, etc.)",
-  "soloItems": {
-    "comment": "Independent items, drop out separately",
-    "items": [
-      {"id": "minecraft:stone_pickaxe", "rarity": "common"},
-      {"id": "minecraft:stone_axe", "rarity": "common"},
-      {"id": "minecraft:stone_shovel", "rarity": "common"}, 
-      {"id": "minecraft:stone_hoe", "rarity": "common"},
-      {"id": "minecraft:coal_block", "rarity": "rare"},
-      {"id": "minecraft:stone_sword", "rarity": "common"},
-      {"id": "minecraft:iron_pickaxe", "rarity": "rare"},
-      {"id": "minecraft:iron_axe", "rarity": "rare"},
-      {"id": "minecraft:iron_shovel", "rarity": "rare"},
-      {"id": "minecraft:workbench", "rarity": "rare"},
-      {"id": "minecraft:iron_hoe", "rarity": "rare"},
-      {"id": "minecraft:iron_sword", "rarity": "rare"},
-      {"id": "minecraft:diamond_pickaxe", "rarity": "mythical"},
-      {"id": "minecraft:diamond_axe", "rarity": "mythical"},
-      {"id": "minecraft:diamond_shovel", "rarity": "mythical"},
-      {"id": "minecraft:diamond_hoe", "rarity": "mythical"},
-      {"id": "minecraft:diamond_sword", "rarity": "mythical"},
-      {"id": "minecraft:leather_helmet", "rarity": "common"},
-      {"id": "minecraft:leather_chestplate", "rarity": "common"},
-      {"id": "minecraft:leather_leggings", "rarity": "common"},
-      {"id": "minecraft:leather_boots", "rarity": "common"},
-      {"id": "minecraft:iron_helmet", "rarity": "ultraRare"},
-      {"id": "minecraft:iron_chestplate", "rarity": "ultraRare"},
-      {"id": "minecraft:iron_leggings", "rarity": "ultraRare"},
-      {"id": "minecraft:iron_boots", "rarity": "ultraRare"},
-      {"id": "minecraft:diamond_helmet", "rarity": "mythical"},
-      {"id": "minecraft:diamond_chestplate", "rarity": "mythical"},
-      {"id": "minecraft:diamond_leggings", "rarity": "mythical"},
-      {"id": "minecraft:diamond_boots", "rarity": "mythical"},
-      {"id": "minecraft:golden_axe", "rarity": "rare"},
-      {"id": "minecraft:golden_pickaxe", "rarity": "rare"},
-      {"id": "minecraft:golden_shovel", "rarity": "rare"},
-      {"id": "minecraft:golden_hoe", "rarity": "rare"},
-      {"id": "minecraft:golden_sword", "rarity": "rare"},
-      {"id": "minecraft:golden_helmet", "rarity": "rare"},
-      {"id": "minecraft:golden_chestplate", "rarity": "rare"},
-      {"id": "minecraft:golden_leggings", "rarity": "rare"},
-      {"id": "minecraft:golden_boots", "rarity": "rare"},
-      {"id": "minecraft:compass", "rarity": "rare"},
-      {"id": "minecraft:clock", "rarity": "rare"},
-      {"id": "minecraft:book", "rarity": "rare"},
-      {"id": "minecraft:writable_book", "rarity": "rare"},
-      {"id": "minecraft:lead", "rarity": "rare"},
-      {"id": "minecraft:name_tag", "rarity": "ultraRare"},
-      {"id": "minecraft:saddle", "rarity": "ultraRare"},
-      {"id": "minecraft:painting", "rarity": "common"},
-      {"id": "minecraft:item_frame", "rarity": "common"},
-      {"id": "minecraft:glow_item_frame", "rarity": "rare"},
-      {"id": "minecraft:armor_stand", "rarity": "common"},
-      {"id": "minecraft:fletching_table", "rarity": "common"},
-      {"id": "minecraft:cartography_table", "rarity": "common"},
-      {"id": "minecraft:chest", "rarity": "common"},
-      {"id": "minecraft:barrel", "rarity": "common"},
-      {"id": "minecraft:ladder", "rarity": "common"},
-      {"id": "minecraft:scaffolding", "rarity": "common"},
-      {"id": "minecraft:coal", "rarity": "common"},
-      {"id": "minecraft:bow", "rarity": "common"},
-      {"id": "minecraft:arrow", "rarity": "common"},
-      {"id": "minecraft:crossbow", "rarity": "ultraRare"},
-      {"id": "minecraft:fishing_rod", "rarity": "rare"},
-      {"id": "minecraft:shield", "rarity": "rare"},
-      {"id": "minecraft:bucket", "rarity": "common"},
-      {"id": "minecraft:glass_bottle", "rarity": "common"},
-      {"id": "minecraft:shears", "rarity": "rare"},
-      {"id": "minecraft:flint_and_steel", "rarity": "rare"},
-      {"id": "minecraft:mace", "rarity": "mythical"},
-      {"id": "minecraft:turtle_helmet", "rarity": "ultraRare"},
-      {"id": "minecraft:leather_horse_armor", "rarity": "rare"},
-      {"id": "minecraft:wolf_armor", "rarity": "ultraRare"},
-      {"id": "minecraft:spyglass", "rarity": "rare"},
-      {"id": "minecraft:map", "rarity": "rare"},
-      {"id": "minecraft:recovery_compass", "rarity": "ultraRare"},
-      {"id": "minecraft:lodestone", "rarity": "rare"},
-      {"id": "minecraft:conduit", "rarity": "ultraRare"},
-      {"id": "minecraft:tinted_glass", "rarity": "rare"},
-      {"id": "minecraft:glass_pane", "rarity": "common"},
-      {"id": "minecraft:brush", "rarity": "rare"},
-      {"id": "minecraft:wind_charge", "rarity": "rare"},
-      {"id": "minecraft:spectral_arrow", "rarity": "rare"},
-      {"id": "minecraft:redstone", "rarity": "rare"},
-      {"id": "minecraft:lapis_lazuli", "rarity": "rare"},
-      {"id": "minecraft:emerald", "rarity": "rare"},
-      {"id": "minecraft:blaze_powder", "rarity": "rare"},
-      {"id": "minecraft:ender_eye", "rarity": "ancient"},
-      {"id": "minecraft:end_crystal", "rarity": "rare"},
-      {"id": "minecraft:diamond", "rarity": "rare"},
-      {"id": "minecraft:raw_iron", "rarity": "common"},
-      {"id": "minecraft:raw_gold", "rarity": "common"},
-      {"id": "minecraft:raw_copper", "rarity": "common"},
-      {"id": "minecraft:iron_ingot", "rarity": "common"},
-      {"id": "minecraft:gold_ingot", "rarity": "common"},
-      {"id": "minecraft:copper_ingot", "rarity": "common"},
-      {"id": "minecraft:iron_nugget", "rarity": "common"},
-      {"id": "minecraft:gold_nugget", "rarity": "common"},
-      {"id": "minecraft:netherite_ingot", "rarity": "ancient"},
-      {"id": "minecraft:clay", "rarity": "common"},
-      {"id": "minecraft:paper", "rarity": "common"},
-      {"id": "minecraft:sugar", "rarity": "common"},
-      {"id": "minecraft:bone_meal", "rarity": "common"},
-      {"id": "minecraft:slime_ball", "rarity": "common"},
-      {"id": "minecraft:magma_cream", "rarity": "rare"},
-      {"id": "minecraft:fermented_spider_eye", "rarity": "rare"},
-      {"id": "minecraft:leather", "rarity": "common"},
-      {"id": "minecraft:bowl", "rarity": "common"},
-      {"id": "minecraft:bread", "rarity": "common"},
-      {"id": "minecraft:wheat", "rarity": "common"},
-      {"id": "minecraft:cookie", "rarity": "common"},
-      {"id": "minecraft:melon", "rarity": "common"},
-      {"id": "minecraft:melon_seeds", "rarity": "common"},
-      {"id": "minecraft:pumpkin_seeds", "rarity": "common"},
-      {"id": "minecraft:cake", "rarity": "common"},
-      {"id": "minecraft:beetroot_soup", "rarity": "common"},
-      {"id": "minecraft:rabbit_stew", "rarity": "common"},
-      {"id": "minecraft:mushroom_stew", "rarity": "common"},
-      {"id": "minecraft:pumpkin_pie", "rarity": "common"},
-      {"id": "minecraft:honey_bottle", "rarity": "rare"},
-      {"id": "minecraft:glistering_melon_slice", "rarity": "rare"},
-      {"id": "minecraft:golden_carrot", "rarity": "rare"},
-      {"id": "minecraft:golden_apple", "rarity": "ultraRare"},
-      {"id": "minecraft:carrot_on_a_stick", "rarity": "rare"},
-      {"id": "minecraft:dried_kelp", "rarity": "common"},
-      {"id": "minecraft:hay_block", "rarity": "common"},
-      {"id": "minecraft:honeycomb_block", "rarity": "rare"},
-      {"id": "minecraft:honey_block", "rarity": "rare"},
-      {"id": "minecraft:slime_block", "rarity": "common"},
-      {"id": "minecraft:bone_block", "rarity": "common"},
-      {"id": "minecraft:tripwire_hook", "rarity": "rare"},
-      {"id": "minecraft:crafter", "rarity": "ultraRare"},
-      {"id": "minecraft:observer", "rarity": "ultraRare"},
-      {"id": "minecraft:beehive", "rarity": "rare"},
-      {"id": "minecraft:music_disc_5", "rarity": "ultraRare"},
-      {"id": "minecraft:snow", "rarity": "common"},
-      {"id": "minecraft:ice", "rarity": "common"},
-      {"id": "minecraft:blue_ice", "rarity": "rare"},
-      {"id": "minecraft:packed_ice", "rarity": "rare"},
-      {"id": "minecraft:jack_o_lantern", "rarity": "common"},
-      {"id": "minecraft:warped_fungus_on_a_stick", "rarity": "rare"},
-      {"id": "minecraft:furnace", "rarity": "rare"},
-      {"id": "minecraft:blast_furnace", "rarity": "rare"},
-      {"id": "minecraft:smoker", "rarity": "rare"},
-      {"id": "minecraft:crafting_table", "rarity": "rare"},
-      {"id": "minecraft:stonecutter", "rarity": "rare"},
-      {"id": "minecraft:loom", "rarity": "rare"},
-      {"id": "minecraft:ender_chest", "rarity": "mythical"},
-      {"id": "minecraft:shulker_box", "rarity": "mythical"},
-      {"id": "minecraft:trapped_chest", "rarity": "rare"},
-      {"id": "minecraft:anvil", "rarity": "ultraRare"},
-      {"id": "minecraft:grindstone", "rarity": "ultraRare"},
-      {"id": "minecraft:enchanting_table", "rarity": "legendary"},
-      {"id": "minecraft:smithing_table", "rarity": "legendary"},
-      {"id": "minecraft:brewing_stand", "rarity": "legendary"},
-      {"id": "minecraft:cauldron", "rarity": "legendary"},
-      {"id": "minecraft:beacon", "rarity": "legendary"},
-      {"id": "minecraft:respawn_anchor", "rarity": "mythical"},
-      {"id": "minecraft:bookshelf", "rarity": "rare"},
-      {"id": "minecraft:lectern", "rarity": "rare"},
-      {"id": "minecraft:chiseled_bookshelf", "rarity": "rare"},
-      {"id": "minecraft:repeater", "rarity": "rare"},
-      {"id": "minecraft:comparator", "rarity": "rare"},
-      {"id": "minecraft:redstone_torch", "rarity": "rare"},
-      {"id": "minecraft:lever", "rarity": "rare"},
-      {"id": "minecraft:stone_button", "rarity": "rare"},
-      {"id": "minecraft:piston", "rarity": "ultraRare"},
-      {"id": "minecraft:sticky_piston", "rarity": "ultraRare"},
-      {"id": "minecraft:dropper", "rarity": "ultraRare"},
-      {"id": "minecraft:dispenser", "rarity": "ultraRare"},
-      {"id": "minecraft:hopper", "rarity": "ultraRare"},
-      {"id": "minecraft:target", "rarity": "mythical"},
-      {"id": "minecraft:daylight_detector", "rarity": "mythical"},
-      {"id": "minecraft:note_block", "rarity": "mythical"},
-      {"id": "minecraft:jukebox", "rarity": "mythical"},
-      {"id": "minecraft:calibrated_sculk_sensor", "rarity": "mythical"},
-      {"id": "minecraft:rail", "rarity": "rare"},
-      {"id": "minecraft:powered_rail", "rarity": "rare"},
-      {"id": "minecraft:detector_rail", "rarity": "rare"},
-      {"id": "minecraft:activator_rail", "rarity": "rare"},
-      {"id": "minecraft:minecart", "rarity": "rare"},
-      {"id": "minecraft:chest_minecart", "rarity": "rare"},
-      {"id": "minecraft:furnace_minecart", "rarity": "rare"},
-      {"id": "minecraft:tnt_minecart", "rarity": "rare"},
-      {"id": "minecraft:hopper_minecart", "rarity": "rare"},
-      {"id": "minecraft:lantern", "rarity": "rare"},
-      {"id": "minecraft:soul_lantern", "rarity": "rare"},
-      {"id": "minecraft:sea_lantern", "rarity": "rare"},
-      {"id": "minecraft:glowstone", "rarity": "rare"},
-      {"id": "minecraft:soul_torch", "rarity": "rare"},
-      {"id": "minecraft:soul_campfire", "rarity": "rare"},
-      {"id": "minecraft:redstone_lamp", "rarity": "rare"},
-      {"id": "minecraft:end_rod", "rarity": "rare"},
-      {"id": "minecraft:lightning_rod", "rarity": "rare"},
-      {"id": "minecraft:magma_block", "rarity": "rare"},
-      {"id": "minecraft:campfire", "rarity": "rare"},
-      {"id": "minecraft:flower_pot", "rarity": "rare"},
-      {"id": "minecraft:composter", "rarity": "rare"},
-      {"id": "minecraft:decorated_pot", "rarity": "rare"},
-      {"id": "minecraft:iron_bars", "rarity": "rare"},
-      {"id": "minecraft:iron_door", "rarity": "rare"},
-      {"id": "minecraft:iron_trapdoor", "rarity": "rare"},
-      {"id": "minecraft:chain", "rarity": "rare"},
-      {"id": "minecraft:tnt", "rarity": "rare"},
-      {"id": "minecraft:firework_rocket", "rarity": "rare"},
-      {"id": "minecraft:fire_charge", "rarity": "rare"},
-      {"id": "minecraft:polished_basalt", "rarity": "rare"},
-      {"id": "minecraft:nether_wart_block", "rarity": "rare"},
-      {"id": "minecraft:muddy_mangrove_roots", "rarity": "common"},
-      {"id": "minecraft:packed_mud", "rarity": "common"},
-      {"id": "minecraft:coarse_dirt", "rarity": "common"}
-    ]
+  "moddedRecipes": {
+    "_comment": "Recipes from other mods - auto-generated on server start",
+    "_usage": "This section is populated automatically when server starts. You can manually add entries if needed.",
+    "defaultItems": {
+      "comment": "Modded recipes available from start (if any)",
+      "items": []
+    },
+    "soloItems": {
+      "comment": "Individual modded recipes (auto-filled)",
+      "items": []
+    },
+    "groupedItems": {
+      "comment": "Grouped modded recipes",
+      "groups": []
+    }
   },
-
-  "_groupedItems_comment": "Hierarchical groups of related recipes (e.g., tool progression, armor sets)",
-  "groupedItems": {
-    "comment": "Hierarchy of groups. Parents merge children",
-    "groups": [
-      {
-        "id": "tools_parent",
-        "name": "Tools",
-        "rarity": "legendary",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "stone_tools",
-        "name": "Stone tools",
-        "rarity": "common",
-        "noExit": false,
-        "recipes": ["minecraft:stone_pickaxe","minecraft:stone_axe","minecraft:stone_shovel","minecraft:stone_hoe","minecraft:stone_sword"],
-        "requirements": ["tools_parent"]
-      },
-      {
-        "id": "iron_tools",
-        "name": "Iron tools",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:iron_pickaxe","minecraft:iron_axe","minecraft:iron_shovel","minecraft:iron_hoe","minecraft:iron_sword"],
-        "requirements": ["tools_parent"]
-      },
-      {
-        "id": "diamond_tools",
-        "name": "Diamond tools",
-        "rarity": "mythical",
-        "noExit": false,
-        "recipes": ["minecraft:diamond_pickaxe","minecraft:diamond_axe","minecraft:diamond_shovel","minecraft:diamond_hoe","minecraft:diamond_sword"],
-        "requirements": ["tools_parent"]
-      },
-      {
-        "id": "golden_tools",
-        "name": "Golden tools",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:golden_pickaxe","minecraft:golden_axe","minecraft:golden_shovel","minecraft:golden_hoe","minecraft:golden_sword"],
-        "requirements": ["tools_parent"]
-      },
-      {
-        "id": "armor_parent",
-        "name": "Armor",
-        "rarity": "legendary",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "leather_armor",
-        "name": "Leather armor",
-        "rarity": "common",
-        "noExit": false,
-        "recipes": ["minecraft:leather_helmet","minecraft:leather_chestplate","minecraft:leather_leggings","minecraft:leather_boots"],
-        "requirements": ["armor_parent"]
-      },
-      {
-        "id": "iron_armor",
-        "name": "Iron armor",
-        "rarity": "ultraRare",
-        "noExit": false,
-        "recipes": ["minecraft:iron_helmet","minecraft:iron_chestplate","minecraft:iron_leggings","minecraft:iron_boots"],
-        "requirements": ["armor_parent"]
-      },
-      {
-        "id": "diamond_armor",
-        "name": "Diamond armor",
-        "rarity": "mythical",
-        "noExit": false,
-        "recipes": ["minecraft:diamond_helmet","minecraft:diamond_chestplate","minecraft:diamond_leggings","minecraft:diamond_boots"],
-        "requirements": ["armor_parent"]
-      },
-      {
-        "id": "golden_armor",
-        "name": "Golden armor",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:golden_helmet","minecraft:golden_chestplate","minecraft:golden_leggings","minecraft:golden_boots"],
-        "requirements": ["armor_parent"]
-      },
-      {
-        "id": "wood_boats",
-        "name": "Boats",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_boat","minecraft:spruce_boat","minecraft:birch_boat","minecraft:jungle_boat","minecraft:acacia_boat","minecraft:dark_oak_boat","minecraft:cherry_boat","minecraft:mangrove_boat","minecraft:bamboo_raft"],
-        "requirements": []
-      },
-      {
-        "id": "wood_chest_boats",
-        "name": "Boats with chests",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_chest_boat","minecraft:spruce_chest_boat","minecraft:birch_chest_boat","minecraft:jungle_chest_boat","minecraft:acacia_chest_boat","minecraft:dark_oak_chest_boat","minecraft:cherry_chest_boat","minecraft:mangrove_chest_boat","minecraft:bamboo_chest_raft"],
-        "requirements": []
-      },
-      {
-        "id": "rail_system",
-        "name": "Rail system",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:rail","minecraft:powered_rail","minecraft:detector_rail","minecraft:activator_rail","minecraft:minecart","minecraft:chest_minecart","minecraft:furnace_minecart","minecraft:tnt_minecart","minecraft:hopper_minecart"],
-        "requirements": []
-      },
-      {
-        "id": "wood_logs",
-        "name": "Logs",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_wood","minecraft:spruce_wood","minecraft:birch_wood","minecraft:jungle_wood","minecraft:acacia_wood","minecraft:dark_oak_wood","minecraft:cherry_wood","minecraft:mangrove_wood","minecraft:bamboo_block","minecraft:crimson_hyphae","minecraft:warped_hyphae"],
-        "requirements": []
-      },
-      {
-        "id": "stripped_logs",
-        "name": "Cleaned logs",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:stripped_oak_wood","minecraft:stripped_spruce_wood","minecraft:stripped_birch_wood","minecraft:stripped_jungle_wood","minecraft:stripped_acacia_wood","minecraft:stripped_dark_oak_wood","minecraft:stripped_cherry_wood","minecraft:stripped_mangrove_wood","minecraft:stripped_crimson_hyphae","minecraft:stripped_warped_hyphae"],
-        "requirements": []
-      },
-      {
-        "id": "wood_doors_variant",
-        "name": "Doors of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_door","minecraft:spruce_door","minecraft:birch_door","minecraft:jungle_door","minecraft:acacia_door","minecraft:dark_oak_door","minecraft:cherry_door","minecraft:mangrove_door","minecraft:bamboo_door","minecraft:crimson_door","minecraft:warped_door","minecraft:copper_door"],
-        "requirements": []
-      },
-      {
-        "id": "wood_trapdoors_variant",
-        "name": "Hatches of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_trapdoor","minecraft:spruce_trapdoor","minecraft:birch_trapdoor","minecraft:jungle_trapdoor","minecraft:acacia_trapdoor","minecraft:dark_oak_trapdoor","minecraft:cherry_trapdoor","minecraft:mangrove_trapdoor","minecraft:bamboo_trapdoor","minecraft:crimson_trapdoor","minecraft:warped_trapdoor","minecraft:copper_trapdoor"],
-        "requirements": []
-      },
-      {
-        "id": "wood_fences_variant",
-        "name": "Fences of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_fence","minecraft:spruce_fence","minecraft:birch_fence","minecraft:jungle_fence","minecraft:acacia_fence","minecraft:dark_oak_fence","minecraft:cherry_fence","minecraft:mangrove_fence","minecraft:bamboo_fence","minecraft:crimson_fence","minecraft:warped_fence","minecraft:nether_brick_fence"],
-        "requirements": []
-      },
-      {
-        "id": "wood_fence_gates_variant",
-        "name": "Gates of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_fence_gate","minecraft:spruce_fence_gate","minecraft:birch_fence_gate","minecraft:jungle_fence_gate","minecraft:acacia_fence_gate","minecraft:dark_oak_fence_gate","minecraft:cherry_fence_gate","minecraft:mangrove_fence_gate","minecraft:bamboo_fence_gate","minecraft:crimson_fence_gate","minecraft:warped_fence_gate"],
-        "requirements": []
-      },
-      {
-        "id": "wood_buttons_variant",
-        "name": "Buttons of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_button","minecraft:spruce_button","minecraft:birch_button","minecraft:jungle_button","minecraft:acacia_button","minecraft:dark_oak_button","minecraft:cherry_button","minecraft:mangrove_button","minecraft:bamboo_button","minecraft:crimson_button","minecraft:warped_button","minecraft:polished_blackstone_button"],
-        "requirements": []
-      },
-      {
-        "id": "wood_pressure_plates_variant",
-        "name": "Pressure plates of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_pressure_plate","minecraft:spruce_pressure_plate","minecraft:birch_pressure_plate","minecraft:jungle_pressure_plate","minecraft:acacia_pressure_plate","minecraft:dark_oak_pressure_plate","minecraft:cherry_pressure_plate","minecraft:mangrove_pressure_plate","minecraft:bamboo_pressure_plate","minecraft:crimson_pressure_plate","minecraft:warped_pressure_plate","minecraft:polished_blackstone_pressure_plate","minecraft:heavy_weighted_pressure_plate","minecraft:light_weighted_pressure_plate"],
-        "requirements": []
-      },
-      {
-        "id": "wood_signs_variant",
-        "name": "Signs of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_sign","minecraft:spruce_sign","minecraft:birch_sign","minecraft:jungle_sign","minecraft:acacia_sign","minecraft:dark_oak_sign","minecraft:cherry_sign","minecraft:mangrove_sign","minecraft:bamboo_sign","minecraft:crimson_sign","minecraft:warped_sign"],
-        "requirements": []
-      },
-      {
-        "id": "wood_hanging_signs_variant",
-        "name": "Hanging signs of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_hanging_sign","minecraft:spruce_hanging_sign","minecraft:birch_hanging_sign","minecraft:jungle_hanging_sign","minecraft:acacia_hanging_sign","minecraft:dark_oak_hanging_sign","minecraft:cherry_hanging_sign","minecraft:mangrove_hanging_sign","minecraft:bamboo_hanging_sign","minecraft:crimson_hanging_sign","minecraft:warped_hanging_sign"],
-        "requirements": []
-      },
-      {
-        "id": "wood_slabs_variant",
-        "name": "All types of slabs",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_slab","minecraft:spruce_slab","minecraft:birch_slab","minecraft:jungle_slab","minecraft:acacia_slab","minecraft:dark_oak_slab","minecraft:cherry_slab","minecraft:mangrove_slab","minecraft:bamboo_mosaic_slab","minecraft:bamboo_slab","minecraft:crimson_slab","minecraft:warped_slab"],
-        "requirements": []
-      },
-      {
-        "id": "wood_stairs_variant",
-        "name": "Stairs of all types",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:oak_stairs","minecraft:spruce_stairs","minecraft:birch_stairs","minecraft:jungle_stairs","minecraft:acacia_stairs","minecraft:dark_oak_stairs","minecraft:cherry_stairs","minecraft:mangrove_stairs","minecraft:bamboo_mosaic_stairs","minecraft:bamboo_stairs","minecraft:crimson_stairs","minecraft:warped_stairs"],
-        "requirements": []
-      },
-      {
-        "id": "wood_mosaic",
-        "name": "Bamboo mosaic",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:bamboo_mosaic"],
-        "requirements": []
-      },
-      {
-        "id": "stone_blocks_parent",
-        "name": "Stone blocks",
-        "rarity": "ultraRare",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "cobblestone_variants",
-        "name": "Cobblestone",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:cobblestone_slab","minecraft:cobblestone_stairs","minecraft:cobblestone_wall","minecraft:mossy_cobblestone","minecraft:mossy_cobblestone_slab","minecraft:mossy_cobblestone_stairs","minecraft:mossy_cobblestone_wall"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "stone_bricks_variants",
-        "name": "Stone bricks",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:stone_bricks","minecraft:stone_brick_slab","minecraft:stone_brick_stairs","minecraft:stone_brick_wall","minecraft:mossy_stone_bricks","minecraft:mossy_stone_brick_slab","minecraft:mossy_stone_brick_stairs","minecraft:mossy_stone_brick_wall","minecraft:chiseled_stone_bricks"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "red_brick_variants",
-        "name": "Red bricks",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:bricks","minecraft:brick_slab","minecraft:brick_stairs","minecraft:brick_wall"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "smooth_stone_variants",
-        "name": "Smooth stone",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:stone_slab","minecraft:stone_stairs","minecraft:smooth_stone_slab", "minecraft:dripstone_block"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "granite_variants",
-        "name": "Granite",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:granite","minecraft:polished_granite","minecraft:polished_granite_slab","minecraft:polished_granite_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "diorite_variants",
-        "name": "Diorite",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:diorite","minecraft:polished_diorite","minecraft:polished_diorite_slab","minecraft:polished_diorite_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "andesite_variants",
-        "name": "Andesite",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:andesite","minecraft:andesite_slab","minecraft:andesite_stairs","minecraft:andesite_wall","minecraft:polished_andesite","minecraft:polished_andesite_slab","minecraft:polished_andesite_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "deepslate_variants",
-        "name": "deep shale",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:cobbled_deepslate_slab","minecraft:cobbled_deepslate_stairs","minecraft:cobbled_deepslate_wall","minecraft:polished_deepslate","minecraft:polished_deepslate_slab","minecraft:polished_deepslate_stairs","minecraft:polished_deepslate_wall","minecraft:deepslate_bricks","minecraft:deepslate_brick_slab","minecraft:deepslate_brick_stairs","minecraft:deepslate_brick_wall","minecraft:deepslate_tiles","minecraft:deepslate_tile_slab","minecraft:deepslate_tile_stairs","minecraft:deepslate_tile_wall","minecraft:chiseled_deepslate"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "blackstone_variants",
-        "name": "Black stone",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:blackstone_slab","minecraft:blackstone_stairs","minecraft:blackstone_wall","minecraft:polished_blackstone","minecraft:polished_blackstone_slab","minecraft:polished_blackstone_stairs","minecraft:polished_blackstone_wall","minecraft:polished_blackstone_bricks","minecraft:polished_blackstone_brick_slab","minecraft:polished_blackstone_brick_stairs","minecraft:polished_blackstone_brick_wall","minecraft:chiseled_polished_blackstone"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "nether_brick_variants",
-        "name": "Hell Bricks",
-        "rarity": "rare",
-        "noExit": true,
-        "recipes": ["minecraft:nether_bricks","minecraft:nether_brick_slab","minecraft:nether_brick_stairs","minecraft:nether_brick_wall","minecraft:red_nether_bricks","minecraft:red_nether_brick_slab","minecraft:red_nether_brick_stairs","minecraft:red_nether_brick_wall","minecraft:chiseled_nether_bricks"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "sandstone_variants",
-        "name": "Sandstone",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:sandstone","minecraft:sandstone_slab","minecraft:sandstone_stairs","minecraft:sandstone_wall","minecraft:chiseled_sandstone","minecraft:cut_sandstone","minecraft:cut_sandstone_slab","minecraft:smooth_sandstone_slab","minecraft:smooth_sandstone_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "red_sandstone_variants",
-        "name": "Red Sandstone",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:red_sandstone","minecraft:red_sandstone_slab","minecraft:red_sandstone_stairs","minecraft:red_sandstone_wall","minecraft:chiseled_red_sandstone","minecraft:cut_red_sandstone","minecraft:cut_red_sandstone_slab","minecraft:smooth_red_sandstone_slab","minecraft:smooth_red_sandstone_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "quartz_variants",
-        "name": "Quartz",
-        "rarity": "rare",
-        "noExit": true,
-        "recipes": ["minecraft:quartz_block","minecraft:quartz_slab","minecraft:quartz_stairs","minecraft:quartz_bricks","minecraft:chiseled_quartz_block","minecraft:quartz_pillar","minecraft:smooth_quartz_slab","minecraft:smooth_quartz_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "prismarine_variants",
-        "name": "Prismarin",
-        "rarity": "rare",
-        "noExit": true,
-        "recipes": ["minecraft:prismarine","minecraft:prismarine_slab","minecraft:prismarine_stairs","minecraft:prismarine_wall","minecraft:prismarine_bricks","minecraft:prismarine_brick_slab","minecraft:prismarine_brick_stairs","minecraft:dark_prismarine","minecraft:dark_prismarine_slab","minecraft:dark_prismarine_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "purpur_variants",
-        "name": "Purple",
-        "rarity": "ultraRare",
-        "noExit": true,
-        "recipes": ["minecraft:purpur_block","minecraft:purpur_pillar","minecraft:purpur_slab","minecraft:purpur_stairs"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "end_stone_variants",
-        "name": "End Stone",
-        "rarity": "ultraRare",
-        "noExit": true,
-        "recipes": ["minecraft:end_stone_bricks","minecraft:end_stone_brick_slab","minecraft:end_stone_brick_stairs","minecraft:end_stone_brick_wall"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "tuff_variants",
-        "name": "Spit",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:polished_tuff","minecraft:polished_tuff_slab","minecraft:polished_tuff_stairs","minecraft:polished_tuff_wall","minecraft:tuff_bricks","minecraft:tuff_brick_slab","minecraft:tuff_brick_stairs","minecraft:tuff_brick_wall","minecraft:chiseled_tuff","minecraft:chiseled_tuff_bricks","minecraft:tuff_slab","minecraft:tuff_stairs","minecraft:tuff_wall"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "food_parent",
-        "name": "Food",
-        "rarity": "ultraRare",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "basic_food",
-        "name": "Basic food",
-        "rarity": "common",
-        "noExit": false,
-        "recipes": [
-          "minecraft:bread",
-          "minecraft:cookie",
-          "minecraft:cake",
-          "minecraft:pumpkin_pie",
-          "minecraft:beetroot_soup",
-          "minecraft:rabbit_stew",
-          "minecraft:mushroom_stew"
-        ],
-        "requirements": ["food_parent"]
-      },
-      {
-        "id": "golden_food",
-        "name": "Golden food",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": [
-          "minecraft:golden_apple",
-          "minecraft:golden_carrot",
-          "minecraft:glistering_melon_slice"
-        ],
-        "requirements": ["food_parent"]
-      },
-      {
-        "id": "food_blocks",
-        "name": "Food blocks",
-        "rarity": "common",
-        "noExit": false,
-        "recipes": [
-          "minecraft:hay_block",
-          "minecraft:dried_kelp_block",
-          "minecraft:honeycomb_block",
-          "minecraft:honey_block"
-        ],
-        "requirements": ["food_parent"]
-      },
-      {
-        "id": "mud_brick_variants",
-        "name": "Mud bricks",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:mud_bricks","minecraft:mud_brick_slab","minecraft:mud_brick_stairs","minecraft:mud_brick_wall"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "copper_variants",
-        "name": "Copper",
-        "rarity": "rare",
-        "noExit": true,
-        "recipes": ["minecraft:copper_block", "minecraft:copper_trapdoor", "minecraft:copper_door", "minecraft:waxed_copper_trapdoor", "minecraft:waxed_exposed_copper_door", "minecraft:cut_copper","minecraft:cut_copper_slab","minecraft:cut_copper_stairs","minecraft:exposed_copper","minecraft:exposed_cut_copper","minecraft:exposed_cut_copper_slab","minecraft:exposed_cut_copper_stairs","minecraft:weathered_copper","minecraft:weathered_cut_copper","minecraft:weathered_cut_copper_slab","minecraft:weathered_cut_copper_stairs","minecraft:oxidized_copper","minecraft:oxidized_cut_copper","minecraft:oxidized_cut_copper_slab","minecraft:oxidized_cut_copper_stairs","minecraft:waxed_copper_block","minecraft:waxed_cut_copper","minecraft:waxed_cut_copper_slab","minecraft:waxed_cut_copper_stairs","minecraft:waxed_exposed_copper","minecraft:waxed_exposed_cut_copper","minecraft:waxed_exposed_cut_copper_slab","minecraft:waxed_exposed_cut_copper_stairs","minecraft:waxed_weathered_copper","minecraft:waxed_weathered_cut_copper","minecraft:waxed_weathered_cut_copper_slab","minecraft:waxed_weathered_cut_copper_stairs","minecraft:waxed_oxidized_copper","minecraft:waxed_oxidized_cut_copper","minecraft:waxed_oxidized_cut_copper_slab","minecraft:waxed_oxidized_cut_copper_stairs","minecraft:copper_bulb","minecraft:exposed_copper_bulb","minecraft:weathered_copper_bulb","minecraft:oxidized_copper_bulb","minecraft:waxed_copper_bulb","minecraft:waxed_exposed_copper_bulb","minecraft:waxed_weathered_copper_bulb","minecraft:waxed_oxidized_copper_bulb","minecraft:copper_grate","minecraft:exposed_copper_grate","minecraft:weathered_copper_grate","minecraft:oxidized_copper_grate","minecraft:waxed_copper_grate","minecraft:waxed_exposed_copper_grate","minecraft:waxed_weathered_copper_grate","minecraft:waxed_oxidized_copper_grate","minecraft:chiseled_copper","minecraft:exposed_chiseled_copper","minecraft:weathered_chiseled_copper","minecraft:oxidized_chiseled_copper", "minecraft:waxed_copper_door","minecraft:waxed_chiseled_copper","minecraft:waxed_exposed_chiseled_copper","minecraft:waxed_weathered_chiseled_copper","minecraft:waxed_oxidized_chiseled_copper"],
-        "requirements": ["stone_blocks_parent"]
-      },
-      {
-        "id": "color_blocks_parent",
-        "name": "Color blocks",
-        "rarity": "ultraRare",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "wool_colors",
-        "name": "Wool",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_wool","minecraft:light_gray_wool","minecraft:gray_wool","minecraft:black_wool","minecraft:brown_wool","minecraft:red_wool","minecraft:orange_wool","minecraft:yellow_wool","minecraft:lime_wool","minecraft:green_wool","minecraft:cyan_wool","minecraft:light_blue_wool","minecraft:blue_wool","minecraft:purple_wool","minecraft:magenta_wool","minecraft:pink_wool"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "carpet_colors",
-        "name": "Carpets",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_carpet","minecraft:light_gray_carpet","minecraft:gray_carpet","minecraft:black_carpet","minecraft:brown_carpet","minecraft:red_carpet","minecraft:orange_carpet","minecraft:yellow_carpet","minecraft:lime_carpet","minecraft:green_carpet","minecraft:cyan_carpet","minecraft:light_blue_carpet","minecraft:blue_carpet","minecraft:purple_carpet","minecraft:magenta_carpet","minecraft:pink_carpet","minecraft:moss_carpet"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "bed_colors",
-        "name": "Beds",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_bed","minecraft:light_gray_bed","minecraft:gray_bed","minecraft:black_bed","minecraft:brown_bed","minecraft:red_bed","minecraft:orange_bed","minecraft:yellow_bed","minecraft:lime_bed","minecraft:green_bed","minecraft:cyan_bed","minecraft:light_blue_bed","minecraft:blue_bed","minecraft:purple_bed","minecraft:magenta_bed","minecraft:pink_bed"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "stained_glass_colors",
-        "name": "Colored glass",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_stained_glass","minecraft:light_gray_stained_glass","minecraft:gray_stained_glass","minecraft:black_stained_glass","minecraft:brown_stained_glass","minecraft:red_stained_glass","minecraft:orange_stained_glass","minecraft:yellow_stained_glass","minecraft:lime_stained_glass","minecraft:green_stained_glass","minecraft:cyan_stained_glass","minecraft:light_blue_stained_glass","minecraft:blue_stained_glass","minecraft:purple_stained_glass","minecraft:magenta_stained_glass","minecraft:pink_stained_glass"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "stained_glass_pane_colors",
-        "name": "Glass panels",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_stained_glass_pane","minecraft:light_gray_stained_glass_pane","minecraft:gray_stained_glass_pane","minecraft:black_stained_glass_pane","minecraft:brown_stained_glass_pane","minecraft:red_stained_glass_pane","minecraft:orange_stained_glass_pane","minecraft:yellow_stained_glass_pane","minecraft:lime_stained_glass_pane","minecraft:green_stained_glass_pane","minecraft:cyan_stained_glass_pane","minecraft:light_blue_stained_glass_pane","minecraft:blue_stained_glass_pane","minecraft:purple_stained_glass_pane","minecraft:magenta_stained_glass_pane","minecraft:pink_stained_glass_pane"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "terracotta_colors",
-        "name": "Terracotta",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_terracotta","minecraft:light_gray_terracotta","minecraft:gray_terracotta","minecraft:black_terracotta","minecraft:brown_terracotta","minecraft:red_terracotta","minecraft:orange_terracotta","minecraft:yellow_terracotta","minecraft:lime_terracotta","minecraft:green_terracotta","minecraft:cyan_terracotta","minecraft:light_blue_terracotta","minecraft:blue_terracotta","minecraft:purple_terracotta","minecraft:magenta_terracotta","minecraft:pink_terracotta"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "banner_colors",
-        "name": "Flags",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_banner","minecraft:light_gray_banner","minecraft:gray_banner","minecraft:black_banner","minecraft:brown_banner","minecraft:red_banner","minecraft:orange_banner","minecraft:yellow_banner","minecraft:lime_banner","minecraft:green_banner","minecraft:cyan_banner","minecraft:light_blue_banner","minecraft:blue_banner","minecraft:purple_banner","minecraft:magenta_banner","minecraft:pink_banner"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "candle_colors",
-        "name": "Candles",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_candle","minecraft:light_gray_candle","minecraft:gray_candle","minecraft:black_candle","minecraft:brown_candle","minecraft:red_candle","minecraft:orange_candle","minecraft:yellow_candle","minecraft:lime_candle","minecraft:green_candle","minecraft:cyan_candle","minecraft:light_blue_candle","minecraft:blue_candle","minecraft:purple_candle","minecraft:magenta_candle","minecraft:pink_candle","minecraft:candle"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "dye_colors",
-        "name": "Dyes",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_dye","minecraft:light_gray_dye","minecraft:gray_dye","minecraft:black_dye","minecraft:brown_dye","minecraft:red_dye","minecraft:orange_dye","minecraft:yellow_dye","minecraft:lime_dye","minecraft:green_dye","minecraft:cyan_dye","minecraft:light_blue_dye","minecraft:blue_dye","minecraft:purple_dye","minecraft:magenta_dye","minecraft:pink_dye"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "concrete_powder_colors",
-        "name": "Concrete mix",
-        "rarity": "common",
-        "noExit": true,
-        "recipes": ["minecraft:white_concrete_powder","minecraft:light_gray_concrete_powder","minecraft:gray_concrete_powder","minecraft:black_concrete_powder","minecraft:brown_concrete_powder","minecraft:red_concrete_powder","minecraft:orange_concrete_powder","minecraft:yellow_concrete_powder","minecraft:lime_concrete_powder","minecraft:green_concrete_powder","minecraft:cyan_concrete_powder","minecraft:light_blue_concrete_powder","minecraft:blue_concrete_powder","minecraft:purple_concrete_powder","minecraft:magenta_concrete_powder","minecraft:pink_concrete_powder"],
-        "requirements": ["color_blocks_parent"]
-      },
-      {
-        "id": "redstone_parent",
-        "name": "Redstone",
-        "rarity": "mythical",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "redstone_basics",
-        "name": "Redstone Basics",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:redstone_torch","minecraft:repeater","minecraft:comparator","minecraft:lever","minecraft:stone_button"],
-        "requirements": ["redstone_parent"]
-      },
-      {
-        "id": "redstone_mechanisms",
-        "name": "Redstone mechanisms",
-        "rarity": "ultraRare",
-        "noExit": false,
-        "recipes": ["minecraft:piston","minecraft:sticky_piston","minecraft:dropper","minecraft:dispenser","minecraft:hopper"],
-        "requirements": ["redstone_parent"]
-      },
-      {
-        "id": "redstone_advanced",
-        "name": "Advanced Redstone",
-        "rarity": "mythical",
-        "noExit": false,
-        "recipes": ["minecraft:target","minecraft:daylight_detector","minecraft:note_block","minecraft:jukebox","minecraft:calibrated_sculk_sensor"],
-        "requirements": ["redstone_parent"]
-      },
-      {
-        "id": "crafting_parent",
-        "name": "Crafting",
-        "rarity": "ultraRare",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "crafting_tables",
-        "name": "Crafting tables",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:crafting_table","minecraft:stonecutter","minecraft:loom"],
-        "requirements": ["crafting_parent"]
-      },
-      {
-        "id": "smelting_tables",
-        "name": "Furnaces and smelting",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:furnace","minecraft:blast_furnace","minecraft:smoker"],
-        "requirements": ["crafting_parent"]
-      },
-      {
-        "id": "enchanting_brewing_parent",
-        "name": "Enchantment and Potions",
-        "rarity": "ancient",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "enchanting_system",
-        "name": "Enchantment system",
-        "rarity": "legendary",
-        "noExit": false,
-        "recipes": ["minecraft:enchanting_table","minecraft:smithing_table"],
-        "requirements": ["enchanting_brewing_parent"]
-      },
-      {
-        "id": "brewing_alchemy",
-        "name": "Potions",
-        "rarity": "legendary",
-        "noExit": false,
-        "recipes": ["minecraft:brewing_stand","minecraft:cauldron"],
-        "requirements": ["enchanting_brewing_parent"]
-      },
-      {
-        "id": "utility_parent",
-        "name": "Utilities",
-        "rarity": "legendary",
-        "noExit": "none",
-        "recipes": [],
-        "requirements": []
-      },
-      {
-        "id": "storage_premium",
-        "name": "Storage premium",
-        "rarity": "mythical",
-        "noExit": false,
-        "recipes": ["minecraft:ender_chest","minecraft:shulker_box"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "storage_special",
-        "name": "Special storage",
-        "rarity": "ultraRare",
-        "noExit": false,
-        "recipes": ["minecraft:trapped_chest"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "repair_tools",
-        "name": "Repair tools",
-        "rarity": "ultraRare",
-        "noExit": false,
-        "recipes": ["minecraft:anvil","minecraft:grindstone"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "special_utilities",
-        "name": "Special utilities",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:magma_block","minecraft:campfire","minecraft:flower_pot","minecraft:composter","minecraft:decorated_pot","minecraft:iron_bars","minecraft:iron_door","minecraft:iron_trapdoor","minecraft:chain"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "light_sources",
-        "name": "Light sources",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:lantern","minecraft:soul_lantern","minecraft:sea_lantern","minecraft:glowstone","minecraft:soul_torch","minecraft:soul_campfire","minecraft:redstone_lamp","minecraft:end_rod","minecraft:lightning_rod"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "explosives",
-        "name": "Explosives",
-        "rarity": "rare",
-        "noExit": false,
-        "recipes": ["minecraft:tnt","minecraft:firework_rocket","minecraft:fire_charge"],
-        "requirements": ["utility_parent"]
-      },
-      {
-        "id": "special_items",
-        "name": "Special items",
-        "rarity": "ultraRare",
-        "noExit": true,
-        "recipes": ["minecraft:netherite_upgrade_smithing_template"],
-        "requirements": []
-      },
-      {
-        "id": "armor_trim_templates",
-        "name": "Clothing templates",
-        "rarity": "ultraRare",
-        "noExit": true,
-        "recipes": ["minecraft:bolt_armor_trim_smithing_template","minecraft:coast_armor_trim_smithing_template","minecraft:dune_armor_trim_smithing_template","minecraft:eye_armor_trim_smithing_template","minecraft:flow_armor_trim_smithing_template","minecraft:host_armor_trim_smithing_template","minecraft:raiser_armor_trim_smithing_template","minecraft:rib_armor_trim_smithing_template","minecraft:sentry_armor_trim_smithing_template","minecraft:shaper_armor_trim_smithing_template","minecraft:silence_armor_trim_smithing_template","minecraft:snout_armor_trim_smithing_template","minecraft:spire_armor_trim_smithing_template","minecraft:tide_armor_trim_smithing_template","minecraft:vex_armor_trim_smithing_template","minecraft:ward_armor_trim_smithing_template","minecraft:wayfinder_armor_trim_smithing_template","minecraft:wild_armor_trim_smithing_template"],
-        "requirements": []
-      },
-      {
-        "id": "banner_patterns",
-        "name": "Flag patterns",
-        "rarity": "rare",
-        "noExit": true,
-        "recipes": ["minecraft:creeper_banner_pattern","minecraft:flower_banner_pattern","minecraft:skull_banner_pattern","minecraft:mojang_banner_pattern"],
-        "requirements": []
-      }
-    ]
-  },
-
-  "_warnings_comment": "Configuration validation settings and conflict detection",
   "warnings": {
     "check_conflicts": true,
     "conflict_types": [

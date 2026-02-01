@@ -62,6 +62,134 @@ public class AmneziaMod implements ModInitializer {
     private static final Set<String> ALL_RECIPES = new HashSet<>();
     private static final Random RANDOM = new Random();
 
+    /**
+     * ✅ НОВАЯ ФУНКЦИЯ: Автоматическая генерация свитков для модовых рецептов
+     */
+    private static void generateModdedRecipes(MinecraftServer server) {
+        if (ITEMS_CONFIG == null || ITEMS_CONFIG.meta == null) {
+            debug("[MODDED] Config is null, skipping");
+            return;
+        }
+
+        // Получаем дефолтную редкость из мета
+        String defaultRarity = ITEMS_CONFIG.meta.moddedRecipesDefaultRarity;
+        if (defaultRarity == null || defaultRarity.isEmpty()) {
+            defaultRarity = "rare";
+        }
+
+        // Собираем все уже существующие рецепты из minecraft config
+        Set<String> existingRecipes = new HashSet<>();
+        
+        // Из minecraftRecipes
+        if (ITEMS_CONFIG.minecraftRecipes != null) {
+            if (ITEMS_CONFIG.minecraftRecipes.defaultItems != null && ITEMS_CONFIG.minecraftRecipes.defaultItems.items != null) {
+                for (ItemConfig item : ITEMS_CONFIG.minecraftRecipes.defaultItems.items) {
+                    if (item != null && item.id != null) {
+                        existingRecipes.add(item.getFullId());
+                    }
+                }
+            }
+            
+            if (ITEMS_CONFIG.minecraftRecipes.soloItems != null && ITEMS_CONFIG.minecraftRecipes.soloItems.items != null) {
+                for (ItemConfig item : ITEMS_CONFIG.minecraftRecipes.soloItems.items) {
+                    if (item != null && item.id != null) {
+                        existingRecipes.add(item.getFullId());
+                    }
+                }
+            }
+            
+            if (ITEMS_CONFIG.minecraftRecipes.groupedItems != null && ITEMS_CONFIG.minecraftRecipes.groupedItems.groups != null) {
+                for (GroupConfig group : ITEMS_CONFIG.minecraftRecipes.groupedItems.groups) {
+                    if (group != null && group.recipes != null) {
+                        for (String recipe : group.recipes) {
+                            String fullId = recipe.contains(":") ? recipe : "minecraft:" + recipe;
+                            existingRecipes.add(fullId);
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Также проверяем старую структуру (для обратной совместимости)
+        if (ITEMS_CONFIG.defaultItems != null && ITEMS_CONFIG.defaultItems.items != null) {
+            for (ItemConfig item : ITEMS_CONFIG.defaultItems.items) {
+                if (item != null && item.id != null) {
+                    existingRecipes.add(item.getFullId());
+                }
+            }
+        }
+        
+        if (ITEMS_CONFIG.soloItems != null && ITEMS_CONFIG.soloItems.items != null) {
+            for (ItemConfig item : ITEMS_CONFIG.soloItems.items) {
+                if (item != null && item.id != null) {
+                    existingRecipes.add(item.getFullId());
+                }
+            }
+        }
+        
+        if (ITEMS_CONFIG.groupedItems != null && ITEMS_CONFIG.groupedItems.groups != null) {
+            for (GroupConfig group : ITEMS_CONFIG.groupedItems.groups) {
+                if (group != null && group.recipes != null) {
+                    for (String recipe : group.recipes) {
+                        String fullId = recipe.contains(":") ? recipe : "minecraft:" + recipe;
+                        existingRecipes.add(fullId);
+                    }
+                }
+            }
+        }
+
+        debug("[MODDED] Existing minecraft recipes: " + existingRecipes.size());
+
+        // Проходим по всем рецептам на сервере
+        int moddedCount = 0;
+        int vanillaCount = 0;
+        int duplicateCount = 0;
+
+        for (RecipeEntry<?> entry : server.getRecipeManager().values()) {
+            String recipeId = entry.id().toString();
+            
+            // Пропускаем рецепты из майнкрафта
+            if (recipeId.startsWith("minecraft:")) {
+                vanillaCount++;
+                continue;
+            }
+            
+            // Пропускаем если уже есть в конфиге
+            if (existingRecipes.contains(recipeId)) {
+                duplicateCount++;
+                continue;
+            }
+            
+            // ✅ Это модовый рецепт - добавляем в moddedRecipes
+            ItemConfig moddedItem = new ItemConfig(recipeId, defaultRarity);
+            
+            // Добавляем в moddedRecipes.soloItems
+            if (ITEMS_CONFIG.moddedRecipes == null) {
+                ITEMS_CONFIG.moddedRecipes = new RecipeSection();
+            }
+            if (ITEMS_CONFIG.moddedRecipes.soloItems == null) {
+                ITEMS_CONFIG.moddedRecipes.soloItems = new SoloItems();
+                ITEMS_CONFIG.moddedRecipes.soloItems.items = new ArrayList<>();
+            }
+            
+            ITEMS_CONFIG.moddedRecipes.soloItems.items.add(moddedItem);
+            
+            // Добавляем в SCROLL_POOL
+            SCROLL_POOL.add(moddedItem);
+            moddedCount++;
+            
+            debug("[MODDED] Added: " + recipeId + " (rarity: " + defaultRarity + ")");
+        }
+
+        debug("=".repeat(60));
+        debug("[MODDED RECIPES] Generation complete:");
+        debug("  Modded recipes added: " + moddedCount);
+        debug("  Vanilla recipes skipped: " + vanillaCount);
+        debug("  Duplicates skipped: " + duplicateCount);
+        debug("  New scroll pool size: " + SCROLL_POOL.size());
+        debug("=".repeat(60));
+    }
+
     private static void validateGroupRecipes(MinecraftServer server) {
         if (ITEMS_CONFIG == null || ITEMS_CONFIG.groupedItems == null) return;
 
@@ -222,6 +350,9 @@ public class AmneziaMod implements ModInitializer {
         registerLootTableModification();
         registerCommands();
         registerServerEvents();
+        
+        // ✅ НОВОЕ: Регистрация торговли свитков с жителями
+        VillagerTradeManager.registerScrollTrades();
 
         debug("============================================================");
         debug("Amnezia initialized successfully!");
@@ -244,8 +375,16 @@ public class AmneziaMod implements ModInitializer {
         Set<String> duplicateIds = new HashSet<>();
         Set<String> invalidGroups = new HashSet<>();
 
-        if (ITEMS_CONFIG.groupedItems != null && ITEMS_CONFIG.groupedItems.groups != null) {
-            for (GroupConfig group : ITEMS_CONFIG.groupedItems.groups) {
+        // ✅ НОВОЕ: Поддержка обеих структур (старой и новой)
+        GroupedItems groupedItems = null;
+        if (ITEMS_CONFIG.minecraftRecipes != null && ITEMS_CONFIG.minecraftRecipes.groupedItems != null) {
+            groupedItems = ITEMS_CONFIG.minecraftRecipes.groupedItems;
+        } else if (ITEMS_CONFIG.groupedItems != null) {
+            groupedItems = ITEMS_CONFIG.groupedItems; // Fallback на старую структуру
+        }
+
+        if (groupedItems != null && groupedItems.groups != null) {
+            for (GroupConfig group : groupedItems.groups) {
                 if (group == null || group.id == null || group.id.trim().isEmpty()) {
                     LOGGER.warn("Ignoring group with null/empty id");
                     continue;
@@ -454,8 +593,16 @@ public class AmneziaMod implements ModInitializer {
         int soloCount = 0;
         int conflictCount = 0;
 
-        if (ITEMS_CONFIG.soloItems != null && ITEMS_CONFIG.soloItems.items != null) {
-            for (ItemConfig item : ITEMS_CONFIG.soloItems.items) {
+        // ✅ НОВОЕ: Поддержка обеих структур (старой и новой)
+        SoloItems soloItems = null;
+        if (ITEMS_CONFIG.minecraftRecipes != null && ITEMS_CONFIG.minecraftRecipes.soloItems != null) {
+            soloItems = ITEMS_CONFIG.minecraftRecipes.soloItems;
+        } else if (ITEMS_CONFIG.soloItems != null) {
+            soloItems = ITEMS_CONFIG.soloItems; // Fallback на старую структуру
+        }
+
+        if (soloItems != null && soloItems.items != null) {
+            for (ItemConfig item : soloItems.items) {
                 if (item != null && item.id != null && item.rarity != null) {
                     if (noExitGroupItems.contains(item.id)) {
                         LOGGER.warn("CONFLICT: Item '" + item.id + "' is in soloItems but in noExit=true group - IGNORING solo entry");
@@ -720,6 +867,12 @@ public class AmneziaMod implements ModInitializer {
 
             debug("Loading all available recipes...");
             loadRecipes(server);
+
+            // ✅ НОВОЕ: Автогенерация модовых рецептов
+            if (ITEMS_CONFIG != null && ITEMS_CONFIG.meta != null && ITEMS_CONFIG.meta.autoGenerateModdedRecipes) {
+                debug("Auto-generating modded recipes...");
+                generateModdedRecipes(server);
+            }
 
             // ✅ ДОБАВЬ ЭТУ СТРОКУ
             debug("Validating group recipes...");
@@ -1356,9 +1509,19 @@ public class AmneziaMod implements ModInitializer {
                 String recipesStr = nbt.getString("Recipes");
                 int recipeCount = recipesStr != null ? recipesStr.split(",").length : 0;
 
-                if (rarity == ScrollRarity.ANCIENT && colorCode.contains("§k")) {
+                // ✅ НОВОЕ: Используем флаг hideAncientRecipeName
+                boolean shouldHide = rarity == ScrollRarity.ANCIENT && 
+                                   CONFIG != null && 
+                                   CONFIG.scrollSettings != null && 
+                                   CONFIG.scrollSettings.hideAncientRecipeName;
+                
+                if (shouldHide) {
+                    String placeholder = CONFIG.scrollSettings.unknownPlaceholder;
+                    if (placeholder == null || placeholder.isEmpty()) {
+                        placeholder = "§k§k§k§k§k§k§k§k";
+                    }
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.group")
-                            .append(Text.literal("███████").formatted(Formatting.OBFUSCATED, color)));
+                            .append(Text.literal(placeholder)));
                 } else {
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.group")
                             .append(Text.literal(groupName).formatted(color)));
@@ -1370,9 +1533,19 @@ public class AmneziaMod implements ModInitializer {
             } else if (scrollType.equals("solo")) {
                 String itemName = nbt.getString("ItemName");
 
-                if (rarity == ScrollRarity.ANCIENT && colorCode.contains("§k")) {
+                // ✅ НОВОЕ: Используем флаг hideAncientRecipeName
+                boolean shouldHide = rarity == ScrollRarity.ANCIENT && 
+                                   CONFIG != null && 
+                                   CONFIG.scrollSettings != null && 
+                                   CONFIG.scrollSettings.hideAncientRecipeName;
+                
+                if (shouldHide) {
+                    String placeholder = CONFIG.scrollSettings.unknownPlaceholder;
+                    if (placeholder == null || placeholder.isEmpty()) {
+                        placeholder = "§k§k§k§k§k§k§k§k";
+                    }
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.recipe")
-                            .append(Text.literal("███████").formatted(Formatting.OBFUSCATED, color)));
+                            .append(Text.literal(placeholder)));
                 } else {
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.recipe")
                             .append(Text.literal(itemName).formatted(color)));

@@ -27,6 +27,7 @@ public class ConfigLoader {
         public Map<String, String> rarityNames = new HashMap<>();
         public CommandConfig commands = new CommandConfig();
         public ModCompatibilityConfig modCompatibility = new ModCompatibilityConfig();
+        public VillagerTradesConfig villagerTrades = new VillagerTradesConfig(); // ✅ НОВОЕ
 
         public MainConfig() {
             // Defaults - only set if not loaded from JSON
@@ -39,6 +40,10 @@ public class ConfigLoader {
         public boolean scrollsDisappear = true;
         public boolean loseRecipesOnDeath = true;
         public boolean debugMode = false;
+        
+        // ✅ НОВОЕ: Скрытие названий рецептов в Ancient свитках
+        public boolean hideAncientRecipeName = true;
+        public String unknownPlaceholder = "§k§k§k§k§k§k§k§k";
     }
 
     public static class LootTableConfig {
@@ -80,13 +85,64 @@ public class ConfigLoader {
         public String moddedRecipeDefaultRarity = "rare";
     }
 
+    // ✅ НОВОЕ: Настройки торговли свитков с жителями
+    public static class VillagerTradesConfig {
+        public boolean enabled = true;
+        public int level = 5;
+        public int basePriceEmeralds = 40;
+        public int maxUses = 1;
+        public int experience = 30;
+        public boolean intellectualBonus = true;
+    }
+
     // ==================== ITEMS CONFIG ====================
     public static class ItemsConfig {
         public MetaInfo meta;
+        
+        // ✅ НОВАЯ СТРУКТУРА: Разделение на minecraft и modded рецепты
+        public RecipeSection minecraftRecipes;
+        public RecipeSection moddedRecipes;
+        
+        // ⚠️ DEPRECATED: Старые поля для обратной совместимости
         public DefaultItems defaultItems;
         public SoloItems soloItems;
         public GroupedItems groupedItems;
         public Warnings warnings;
+        
+        /**
+         * Метод для миграции старой структуры в новую
+         */
+        public void migrateToNewStructure() {
+            if (minecraftRecipes == null && defaultItems != null) {
+                // Старая структура - мигрируем
+                minecraftRecipes = new RecipeSection();
+                minecraftRecipes.defaultItems = defaultItems;
+                minecraftRecipes.soloItems = soloItems;
+                minecraftRecipes.groupedItems = groupedItems;
+                
+                LOGGER.info("Migrated old items.json structure to new format");
+            }
+            
+            // Создаём moddedRecipes если его нет
+            if (moddedRecipes == null) {
+                moddedRecipes = new RecipeSection();
+                moddedRecipes.defaultItems = new DefaultItems();
+                moddedRecipes.defaultItems.items = new ArrayList<>();
+                moddedRecipes.soloItems = new SoloItems();
+                moddedRecipes.soloItems.items = new ArrayList<>();
+                moddedRecipes.groupedItems = new GroupedItems();
+                moddedRecipes.groupedItems.groups = new ArrayList<>();
+            }
+        }
+    }
+    
+    /**
+     * ✅ НОВЫЙ КЛАСС: Секция рецептов (minecraft или modded)
+     */
+    public static class RecipeSection {
+        public DefaultItems defaultItems;
+        public SoloItems soloItems;
+        public GroupedItems groupedItems;
     }
 
     public static class MetaInfo {
@@ -95,6 +151,10 @@ public class ConfigLoader {
         public String author;
         public String totalitems;
         public String coverage;
+        
+        // ✅ НОВЫЕ ПОЛЯ для модовой совместимости
+        public boolean autoGenerateModdedRecipes = true;
+        public String moddedRecipesDefaultRarity = "rare";
     }
 
     public static class DefaultItems {
@@ -426,6 +486,9 @@ public class ConfigLoader {
                 if (config.defaultItems.items == null) config.defaultItems.items = new ArrayList<>();
                 if (config.soloItems.items == null) config.soloItems.items = new ArrayList<>();
                 if (config.groupedItems.groups == null) config.groupedItems.groups = new ArrayList<>();
+
+                // ✅ НОВОЕ: Мигрируем старую структуру в новую
+                config.migrateToNewStructure();
 
                 AmneziaMod.debug("Items config loaded successfully");
                 return config;

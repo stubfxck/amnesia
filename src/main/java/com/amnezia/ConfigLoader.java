@@ -44,6 +44,9 @@ public class ConfigLoader {
         // ✅ НОВОЕ: Скрытие названий рецептов в Ancient свитках
         public boolean hideAncientRecipeName = true;
         public String unknownPlaceholder = "§k§k§k§k§k§k§k§k";
+        
+        // ✅ НОВОЕ: Режим сложности изучения рецептов
+        public String difficultyMode = "hard"; // "easy" или "hard"
     }
 
     public static class LootTableConfig {

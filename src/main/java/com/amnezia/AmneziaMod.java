@@ -1055,7 +1055,10 @@ public class AmneziaMod implements ModInitializer {
     //     return available.get(RANDOM.nextInt(available.size()));
     // }
 
-    private static String getScrollDataName(Object data) {
+    /**
+     * Получает читаемое название для данных свитка
+     */
+    public static String getScrollDataName(Object data) {
         if (data instanceof GroupConfig) {
             return ((GroupConfig) data).name;
         } else if (data instanceof ItemConfig) {
@@ -1225,13 +1228,40 @@ public class AmneziaMod implements ModInitializer {
         }
         UUID playerUuid = player.getUuid();
         String playerName = player.getName().getString();
-        String worldKey = getWorldId(player); // ✅ ИЗМЕНЕНО
+        String worldKey = getWorldId(player);
+        MinecraftServer server = player.getServer();
         
         debug("[LEARN] Recipe: " + recipe + " for " + playerName + " [" + worldKey + "]");
         
-        PlayerDataManager.addRecipe(playerUuid, playerName, worldKey, recipe);
+        // ✅ НОВОЕ: Проверяем режим сложности
+        String difficultyMode = "hard"; // По умолчанию
+        if (CONFIG != null && CONFIG.scrollSettings != null && CONFIG.scrollSettings.difficultyMode != null) {
+            difficultyMode = CONFIG.scrollSettings.difficultyMode.toLowerCase();
+        }
         
-        unlockRecipe(player, recipe);
+        if (difficultyMode.equals("easy") && server != null) {
+            // ✅ EASY MODE: Изучаем всю цепочку зависимостей
+            debug("[EASY MODE] Resolving dependencies for: " + recipe);
+            List<String> dependencies = RecipeDependencyResolver.resolveDependencies(recipe, server);
+            
+            int learnedCount = 0;
+            for (String dependencyRecipe : dependencies) {
+                if (!hasRecipe(player, dependencyRecipe)) {
+                    PlayerDataManager.addRecipe(playerUuid, playerName, worldKey, dependencyRecipe);
+                    unlockRecipe(player, dependencyRecipe);
+                    learnedCount++;
+                    debug("[EASY MODE] ✓ Learned dependency: " + dependencyRecipe);
+                }
+            }
+            
+            debug("[EASY MODE] Total learned: " + learnedCount + " recipes");
+            
+        } else {
+            // ✅ HARD MODE: Изучаем только указанный рецепт
+            PlayerDataManager.addRecipe(playerUuid, playerName, worldKey, recipe);
+            unlockRecipe(player, recipe);
+            debug("[HARD MODE] Learned single recipe: " + recipe);
+        }
     }
 
     public static boolean hasRecipe(ServerPlayerEntity player, String recipe) {
@@ -1516,12 +1546,10 @@ public class AmneziaMod implements ModInitializer {
                                    CONFIG.scrollSettings.hideAncientRecipeName;
                 
                 if (shouldHide) {
-                    String placeholder = CONFIG.scrollSettings.unknownPlaceholder;
-                    if (placeholder == null || placeholder.isEmpty()) {
-                        placeholder = "§k§k§k§k§k§k§k§k";
-                    }
+                    // ✅ ИСПРАВЛЕНО: Для обфускации нужен реальный текст + Formatting.OBFUSCATED
+                    String obfuscatedText = "XXXXXXXX"; // 8 символов для обфускации
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.group")
-                            .append(Text.literal(placeholder)));
+                            .append(Text.literal(obfuscatedText).formatted(Formatting.OBFUSCATED).formatted(color)));
                 } else {
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.group")
                             .append(Text.literal(groupName).formatted(color)));
@@ -1540,12 +1568,10 @@ public class AmneziaMod implements ModInitializer {
                                    CONFIG.scrollSettings.hideAncientRecipeName;
                 
                 if (shouldHide) {
-                    String placeholder = CONFIG.scrollSettings.unknownPlaceholder;
-                    if (placeholder == null || placeholder.isEmpty()) {
-                        placeholder = "§k§k§k§k§k§k§k§k";
-                    }
+                    // ✅ ИСПРАВЛЕНО: Для обфускации нужен реальный текст + Formatting.OBFUSCATED
+                    String obfuscatedText = "XXXXXXXX"; // 8 символов для обфускации
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.recipe")
-                            .append(Text.literal(placeholder)));
+                            .append(Text.literal(obfuscatedText).formatted(Formatting.OBFUSCATED).formatted(color)));
                 } else {
                     tooltip.add(Text.translatable("tooltip.amnezia.scroll.recipe")
                             .append(Text.literal(itemName).formatted(color)));

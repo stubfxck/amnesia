@@ -13,7 +13,9 @@
     "hideAncientRecipeName": true,
     "_hideAncientRecipeName_comment": "Hide recipe names in Ancient scrolls using obfuscation (§k)",
     "unknownPlaceholder": "§k§k§k§k§k§k§k§k",
-    "_unknownPlaceholder_comment": "Text to display instead of recipe name when hidden. Default is obfuscated text."
+    "_unknownPlaceholder_comment": "Text to display instead of recipe name when hidden. Default is obfuscated text.",
+    "difficultyMode": "hard",
+    "_difficultyMode_comment": "Recipe learning mode: \"easy\" (learns full recipe tree), \"hard\" (learns only the recipe)"
   },
   "spawnChances": {
     "_comment": "Probability of generating scrolls of each rarity (values between 0.0 and 1.0)",

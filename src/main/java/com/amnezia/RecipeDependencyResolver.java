@@ -16,71 +16,73 @@ import java.util.*;
 public class RecipeDependencyResolver {
     
     /**
-     * Разрешает все зависимости рецепта (для Easy Mode)
+     * ✅ ИСПРАВЛЕНО: Разрешает все зависимости рецепта (для Easy Mode)
+     * Теперь учит ингредиенты (палки, доски), а не то, что можно скрафтить из результата
      * 
      * @param recipeId ID рецепта для разрешения
      * @param server Сервер
-     * @return Список всех рецептов в цепочке (включая сам рецепт)
+     * @return Список всех рецептов-зависимостей (ингредиентов)
      */
     public static List<String> resolveDependencies(String recipeId, MinecraftServer server) {
         Set<String> resolved = new HashSet<>();
         Set<String> visiting = new HashSet<>();
         
-        resolveDependenciesRecursive(recipeId, server, resolved, visiting);
+        // ✅ Находим рецепт
+        Optional<? extends RecipeEntry<?>> recipeOpt = findRecipe(recipeId, server);
+        
+        if (recipeOpt.isEmpty()) {
+            AmneziaMod.debug("[EASY MODE] Recipe not found: " + recipeId);
+            return new ArrayList<>();
+        }
+        
+        // ✅ Рекурсивно собираем зависимости (ингредиенты)
+        resolveDependenciesRecursive(recipeOpt.get(), server, resolved, visiting);
         
         List<String> result = new ArrayList<>(resolved);
-        AmneziaMod.debug("[EASY MODE] Resolved " + result.size() + " recipes for " + recipeId);
+        AmneziaMod.debug("[EASY MODE] Resolved " + result.size() + " ingredient recipes for " + recipeId + ": " + result);
         
         return result;
     }
     
     /**
-     * Рекурсивно разрешает зависимости
+     * ✅ ИСПРАВЛЕНО: Рекурсивно разрешает зависимости-ингредиенты
      */
-    private static void resolveDependenciesRecursive(String recipeId, MinecraftServer server, 
+    private static void resolveDependenciesRecursive(RecipeEntry<?> recipeEntry, MinecraftServer server, 
                                                       Set<String> resolved, Set<String> visiting) {
+        String recipeId = recipeEntry.id().toString();
+        
         // Защита от циклических зависимостей
         if (visiting.contains(recipeId)) {
             AmneziaMod.debug("[EASY MODE] Circular dependency detected: " + recipeId);
             return;
         }
         
-        // Уже обработали этот рецепт
-        if (resolved.contains(recipeId)) {
-            return;
-        }
-        
         visiting.add(recipeId);
         
-        // Находим рецепт
-        Optional<? extends RecipeEntry<?>> recipeOpt = findRecipe(recipeId, server);
-        
-        if (recipeOpt.isEmpty()) {
-            AmneziaMod.debug("[EASY MODE] Recipe not found: " + recipeId);
-            visiting.remove(recipeId);
-            return;
-        }
-        
-        RecipeEntry<?> recipeEntry = recipeOpt.get();
         Recipe<?> recipe = recipeEntry.value();
         
-        // Добавляем текущий рецепт
-        resolved.add(recipeEntry.id().toString());
-        
-        // Получаем ингредиенты
+        // ✅ Получаем ингредиенты текущего рецепта
         List<Ingredient> ingredients = getIngredients(recipe);
         
-        // Для каждого ингредиента ищем его рецепт
+        // ✅ Для каждого ингредиента ищем рецепты его создания
         for (Ingredient ingredient : ingredients) {
             for (ItemStack stack : ingredient.getMatchingStacks()) {
                 Item item = stack.getItem();
                 Identifier itemId = Registries.ITEM.getId(item);
                 
-                // Ищем рецепт крафта этого предмета
-                List<String> itemRecipes = findRecipesProducing(itemId.toString(), server);
+                // ✅ Ищем все рецепты, которые создают этот предмет
+                List<RecipeEntry<?>> ingredientRecipes = findRecipesProducing(itemId.toString(), server);
                 
-                for (String dependencyRecipe : itemRecipes) {
-                    resolveDependenciesRecursive(dependencyRecipe, server, resolved, visiting);
+                for (RecipeEntry<?> ingredientRecipe : ingredientRecipes) {
+                    String ingredientRecipeId = ingredientRecipe.id().toString();
+                    
+                    // ✅ Добавляем рецепт ингредиента в resolved
+                    if (!resolved.contains(ingredientRecipeId) && !visiting.contains(ingredientRecipeId)) {
+                        resolved.add(ingredientRecipeId);
+                        
+                        // ✅ Рекурсивно обрабатываем зависимости этого ингредиента
+                        resolveDependenciesRecursive(ingredientRecipe, server, resolved, visiting);
+                    }
                 }
             }
         }
@@ -108,10 +110,11 @@ public class RecipeDependencyResolver {
     }
     
     /**
+     * ✅ ИСПРАВЛЕНО: Возвращает RecipeEntry вместо String
      * Находит все рецепты, производящие данный предмет
      */
-    private static List<String> findRecipesProducing(String itemId, MinecraftServer server) {
-        List<String> recipes = new ArrayList<>();
+    private static List<RecipeEntry<?>> findRecipesProducing(String itemId, MinecraftServer server) {
+        List<RecipeEntry<?>> recipes = new ArrayList<>();
         
         Identifier targetId = Identifier.tryParse(itemId);
         if (targetId == null) {
@@ -134,7 +137,7 @@ public class RecipeDependencyResolver {
             Identifier resultId = Registries.ITEM.getId(result.getItem());
             
             if (resultId.equals(targetId)) {
-                recipes.add(entry.id().toString());
+                recipes.add(entry);
             }
         }
         

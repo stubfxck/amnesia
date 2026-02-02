@@ -8,13 +8,13 @@
     "_scrollsDisappear_comment": "Whether scrolls disappear after use",
     "loseRecipesOnDeath": true,
     "_loseRecipesOnDeath_comment": "Whether players lose learned recipes upon death",
-    "debugMode": false,
+    "debugMode": true,
     "_debugMode_comment": "Enable debug logging in console",
     "hideAncientRecipeName": true,
     "_hideAncientRecipeName_comment": "Hide recipe names in Ancient scrolls using obfuscation (§k)",
     "unknownPlaceholder": "§k§k§k§k§k§k§k§k",
     "_unknownPlaceholder_comment": "Text to display instead of recipe name when hidden. Default is obfuscated text.",
-    "difficultyMode": "hard",
+    "difficultyMode": "easy",
     "_difficultyMode_comment": "Recipe learning mode: \"easy\" (learns full recipe tree), \"hard\" (learns only the recipe)"
   },
   "spawnChances": {
@@ -34,9 +34,9 @@
   },
   "notifications": {
     "_comment": "Settings for scroll learning notifications",
-    "type": "none",
+    "type": "chat",
     "_type_comment": "Notification type: 'none', 'chat', 'actionbar', or 'title'",
-    "chatFormat": "§6[§e<item_name>§6] - <rarity_color><rarity> §7(<learned_text> <recipes_learned>/<total_recipes>)",
+    "chatFormat": "§6[§e<item_name>§6] - <rarity_color><rarity> §7(Learned: <recipes_learned>/<total_recipes>)",
     "_chatFormat_comment": "Format for chat notifications. Supports placeholders like <item_name>, <rarity>, etc.",
     "actionbarFormat": "§e<item_name> §7| <rarity_color><rarity>",
     "_actionbarFormat_comment": "Format for actionbar notifications",

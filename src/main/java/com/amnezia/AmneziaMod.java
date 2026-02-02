@@ -1221,6 +1221,9 @@ public class AmneziaMod implements ModInitializer {
         debug("Loaded " + ALL_RECIPES.size() + " recipes into memory");
     }
 
+    /**
+     * ✅ ИСПРАВЛЕНО: Easy Mode теперь учит и основной рецепт, а не только зависимости
+     */
     public static void learnRecipe(ServerPlayerEntity player, String recipe) {
         if (recipe == null || recipe.trim().isEmpty()) {
             debug("LEARN: Invalid recipe (null or empty)");
@@ -1233,18 +1236,20 @@ public class AmneziaMod implements ModInitializer {
         
         debug("[LEARN] Recipe: " + recipe + " for " + playerName + " [" + worldKey + "]");
         
-        // ✅ НОВОЕ: Проверяем режим сложности
+        // ✅ Проверяем режим сложности
         String difficultyMode = "hard"; // По умолчанию
         if (CONFIG != null && CONFIG.scrollSettings != null && CONFIG.scrollSettings.difficultyMode != null) {
             difficultyMode = CONFIG.scrollSettings.difficultyMode.toLowerCase();
         }
         
         if (difficultyMode.equals("easy") && server != null) {
-            // ✅ EASY MODE: Изучаем всю цепочку зависимостей
+            // ✅ EASY MODE: Изучаем всю цепочку зависимостей + сам рецепт
             debug("[EASY MODE] Resolving dependencies for: " + recipe);
             List<String> dependencies = RecipeDependencyResolver.resolveDependencies(recipe, server);
             
             int learnedCount = 0;
+            
+            // Сначала учим зависимости (ингредиенты)
             for (String dependencyRecipe : dependencies) {
                 if (!hasRecipe(player, dependencyRecipe)) {
                     PlayerDataManager.addRecipe(playerUuid, playerName, worldKey, dependencyRecipe);
@@ -1252,6 +1257,14 @@ public class AmneziaMod implements ModInitializer {
                     learnedCount++;
                     debug("[EASY MODE] ✓ Learned dependency: " + dependencyRecipe);
                 }
+            }
+            
+            // ✅ ВАЖНО: Потом учим сам основной рецепт
+            if (!hasRecipe(player, recipe)) {
+                PlayerDataManager.addRecipe(playerUuid, playerName, worldKey, recipe);
+                unlockRecipe(player, recipe);
+                learnedCount++;
+                debug("[EASY MODE] ✓ Learned main recipe: " + recipe);
             }
             
             debug("[EASY MODE] Total learned: " + learnedCount + " recipes");

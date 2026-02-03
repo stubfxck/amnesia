@@ -1,141 +1,84 @@
 {
-  "_comment": "Amnezia Mod Configuration File",
   "language": "en_us",
-  "_language_comment": "Language for mod messages: 'en_us' for English, 'ru_ru' for Russian. Requires game restart.",
   "scrollSettings": {
-    "_comment": "General scroll behavior settings",
     "scrollsDisappear": true,
-    "_scrollsDisappear_comment": "Whether scrolls disappear after use",
     "loseRecipesOnDeath": true,
-    "_loseRecipesOnDeath_comment": "Whether players lose learned recipes upon death",
     "debugMode": true,
-    "_debugMode_comment": "Enable debug logging in console",
     "hideAncientRecipeName": true,
-    "_hideAncientRecipeName_comment": "Hide recipe names in Ancient scrolls using obfuscation (§k)",
     "unknownPlaceholder": "§k§k§k§k§k§k§k§k",
-    "_unknownPlaceholder_comment": "Text to display instead of recipe name when hidden. Default is obfuscated text.",
-    "difficultyMode": "easy",
-    "_difficultyMode_comment": "Recipe learning mode: \"easy\" (learns full recipe tree), \"hard\" (learns only the recipe)"
+    "difficultyMode": "hard"
   },
   "spawnChances": {
-    "_comment": "Probability of generating scrolls of each rarity (values between 0.0 and 1.0)",
     "common": 0.4,
-    "_common_comment": "Chance for common scrolls",
     "rare": 0.2,
-    "_rare_comment": "Chance for rare scrolls",
     "ultraRare": 0.1,
-    "_ultraRare_comment": "Chance for ultra rare scrolls",
     "mythical": 0.05,
-    "_mythical_comment": "Chance for mythical scrolls",
     "legendary": 0.02,
-    "_legendary_comment": "Chance for legendary scrolls",
-    "ancient": 0.005,
-    "_ancient_comment": "Chance for ancient scrolls"
+    "ancient": 0.005
   },
   "notifications": {
-    "_comment": "Settings for scroll learning notifications",
     "type": "chat",
-    "_type_comment": "Notification type: 'none', 'chat', 'actionbar', or 'title'",
     "chatFormat": "§6[§e<item_name>§6] - <rarity_color><rarity> §7(Learned: <recipes_learned>/<total_recipes>)",
-    "_chatFormat_comment": "Format for chat notifications. Supports placeholders like <item_name>, <rarity>, etc.",
     "actionbarFormat": "§e<item_name> §7| <rarity_color><rarity>",
-    "_actionbarFormat_comment": "Format for actionbar notifications",
     "titleFormat": {
-      "_comment": "Title notification format",
       "title": "<rarity_color><rarity>",
-      "_title_comment": "Title text format",
-      "subtitle": "§7<player> <learned_text_lower> §f<item_name>",
-      "_subtitle_comment": "Subtitle text format"
+      "subtitle": "§7<player> <learned_text_lower> §f<item_name>"
     }
   },
   "rarityColors": {
-    "_comment": "Color codes for each scroll rarity (Minecraft color codes)",
     "ultraRare": "§b",
-    "_ultraRare_comment": "Color for ultra rare scrolls",
     "common": "§7",
-    "_common_comment": "Color for common scrolls",
     "legendary": "§6",
-    "_legendary_comment": "Color for legendary scrolls",
     "rare": "§a",
-    "_rare_comment": "Color for rare scrolls",
     "mythical": "§c",
-    "_mythical_comment": "Color for mythical scrolls",
-    "ancient": "§3",
-    "_ancient_comment": "Color for ancient scrolls"
+    "ancient": "§3"
   },
   "rarityNames": {
-    "_comment": "Display names for each scroll rarity",
     "ultraRare": "Ультра редкий",
-    "_ultraRare_comment": "Display name for ultra rare scrolls",
     "common": "Обычный",
-    "_common_comment": "Display name for common scrolls",
     "legendary": "Легендарный",
-    "_legendary_comment": "Display name for legendary scrolls",
     "rare": "Редкий",
-    "_rare_comment": "Display name for rare scrolls",
     "mythical": "Мифический",
-    "_mythical_comment": "Display name for mythical scrolls",
-    "ancient": "Древний",
-    "_ancient_comment": "Display name for ancient scrolls"
+    "ancient": "Древний"
   },
   "commands": {
-    "_comment": "Settings for commands executed when scrolls are learned",
     "enabled": false,
-    "_enabled_comment": "Whether to execute commands when scrolls are learned",
     "commandsByRarity": {
-      "_comment": "Commands to execute for each rarity. Supports placeholders.",
       "ultraRare": [
         "experience add <player> 20 points",
         "tellraw @a {\"text\":\"<player> <learned_ultra_rare_scroll> <item_name>!\",\"color\":\"aqua\"}"
       ],
-      "_ultraRare_commands_comment": "Commands for ultra rare scrolls",
       "common": [
         "experience add <player> 1 points"
       ],
-      "_common_commands_comment": "Commands for common scrolls",
       "legendary": [
         "experience add <player> 50 points",
         "effect give <player> minecraft:luck 60 1"
       ],
-      "_legendary_commands_comment": "Commands for legendary scrolls",
       "rare": [
         "experience add <player> 5 points"
       ],
-      "_rare_commands_comment": "Commands for rare scrolls",
       "mythical": [
         "experience add <player> 30 points"
       ],
-      "_mythical_commands_comment": "Commands for mythical scrolls",
       "ancient": [
         "experience add <player> 100 points",
         "give <player> minecraft:diamond 1",
         "tellraw @a {\"text\":\"<ancient_scroll_emoji> <player> <learned_ancient_scroll> <item_name>! <ancient_scroll_emoji>\",\"color\":\"dark_aqua\",\"bold\":true}"
-      ],
-      "_ancient_commands_comment": "Commands for ancient scrolls"
+      ]
     }
   },
   "modCompatibility": {
-    "_comment": "Settings for compatibility with other mods",
     "hideModdedRecipes": true,
-    "_hideModdedRecipes_comment": "Whether to hide recipes from other mods in scroll generation",
     "generateScrollsForModdedRecipes": true,
-    "_generateScrollsForModdedRecipes_comment": "Whether to generate scrolls for recipes from other mods",
-    "moddedRecipeDefaultRarity": "rare",
-    "_moddedRecipeDefaultRarity_comment": "Default rarity for modded recipes"
+    "moddedRecipeDefaultRarity": "rare"
   },
   "villagerTrades": {
-    "_comment": "Settings for villager scroll trades",
     "enabled": true,
-    "_enabled_comment": "Enable/disable villager scroll trades (requires restart)",
     "level": 5,
-    "_level_comment": "Villager level required to trade scrolls (1-5). Level 5 = Master/Expert",
     "basePriceEmeralds": 40,
-    "_basePriceEmeralds_comment": "Base price in emeralds. Actual price varies by profession (35-48 emeralds)",
     "maxUses": 1,
-    "_maxUses_comment": "How many times the trade can be used before restocking",
     "experience": 30,
-    "_experience_comment": "XP given to villager per trade (higher = longer restock time)",
-    "intellectualBonus": true,
-    "_intellectualBonus_comment": "Give librarian, cartographer, cleric higher chances for rare scrolls"
+    "intellectualBonus": true
   }
 }

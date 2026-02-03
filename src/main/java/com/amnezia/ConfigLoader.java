@@ -288,6 +288,45 @@ public class ConfigLoader {
         }
     }
 
+    /**
+     * ✅ Удаляет строки с _comment из JSON, корректно обрабатывая запятые
+     */
+    private static String removeJsonComments(String jsonContent) {
+        String[] lines = jsonContent.split("\\r?\\n");
+        StringBuilder result = new StringBuilder();
+        
+        for (int i = 0; i < lines.length; i++) {
+            String line = lines[i];
+            String trimmed = line.trim();
+            
+            // Пропускаем строки с _comment
+            if (trimmed.contains("_comment")) {
+                // Если предыдущая строка заканчивается запятой, удаляем запятую
+                if (result.length() > 0) {
+                    String currentResult = result.toString();
+                    int lastCommaIndex = currentResult.lastIndexOf(',');
+                    if (lastCommaIndex > 0) {
+                        // Проверяем что после запятой только пробелы/переносы
+                        String afterComma = currentResult.substring(lastCommaIndex + 1).trim();
+                        if (afterComma.isEmpty()) {
+                            // Удаляем запятую
+                            result.setLength(lastCommaIndex);
+                            result.append("\n");
+                        }
+                    }
+                }
+                continue;
+            }
+            
+            result.append(line).append("\n");
+        }
+        
+        return result.toString();
+    }
+
+    /**
+     * ✅ ИСПРАВЛЕНО: Правильно удаляет комментарии без поломки JSON
+     */
     public static MainConfig loadMainConfig() {
         try {
             Files.createDirectories(CONFIGDIR);
@@ -307,10 +346,12 @@ public class ConfigLoader {
             }
 
             try {
-                Reader reader = Files.newBufferedReader(configFile);
+                // ✅ ИСПРАВЛЕНО: Читаем и фильтруем комментарии
+                String jsonContent = Files.readString(configFile);
+                String filteredJson = removeJsonComments(jsonContent);
+                
                 Gson gsonWithComments = new GsonBuilder().setPrettyPrinting().setLenient().create();
-                MainConfig config = gsonWithComments.fromJson(reader, MainConfig.class);
-                reader.close();
+                MainConfig config = gsonWithComments.fromJson(filteredJson, MainConfig.class);
 
                 if (config == null) {
                     LOGGER.error("Failed to parse config.json, using defaults");

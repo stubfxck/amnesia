@@ -41,6 +41,12 @@ import net.minecraft.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import java.util.*;
+import java.nio.file.Path;
+import java.nio.file.Files;
+import net.fabricmc.loader.api.FabricLoader;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 
 public class AmneziaMod implements ModInitializer {
 
@@ -995,8 +1001,74 @@ public class AmneziaMod implements ModInitializer {
         debug("=".repeat(60));
     }
 
+    private static void saveDiscoveredStructure(String path, LootTableConfig config) {
+        try {
+            Path discoveredFile = FabricLoader.getInstance().getConfigDir().resolve("discovered_structures.json");
+            
+            Map<String, LootTableConfig> discovered = new HashMap<>();
+            
+            // Читаем существующие
+            if (Files.exists(discoveredFile)) {
+                try {
+                    String json = Files.readString(discoveredFile);
+                    discovered = new Gson().fromJson(json, 
+                        new com.google.gson.reflect.TypeToken<Map<String, LootTableConfig>>(){}.getType());
+                } catch (Exception e) {
+                    LOGGER.warn("Failed to read discovered structures: " + e.getMessage());
+                }
+            }
+            
+            // Добавляем новую
+            discovered.put(path, config);
+            
+            // Сохраняем
+            String json = new GsonBuilder().setPrettyPrinting().create().toJson(discovered);
+            Files.writeString(discoveredFile, json);
+            
+            debug("[AUTO-DETECT] Saved to discovered_structures.json");
+            
+        } catch (Exception e) {
+            LOGGER.error("Failed to save discovered structure: " + e.getMessage(), e);
+        }
+    }
+
+    private static LootTableConfig getDefaultModdedLootConfig(String path) {
+        // Проверяем что авто-детект включен
+        if (CONFIG == null || CONFIG.modCompatibility == null || 
+            !CONFIG.modCompatibility.autoDetectModdedStructures) {
+            return null;
+        }
+        
+        // Проверяем что это структура с сундуком (не из майнкрафта)
+        if (!path.contains("chests/") && !path.contains("chest")) {
+            return null;
+        }
+        
+        // Игнорируем майнкрафт структуры (они уже в конфиге)
+        if (path.startsWith("minecraft:")) {
+            return null;
+        }
+        
+        // ✅ Это модовая структура - создаём дефолтный конфиг
+        debug("[AUTO-DETECT] Found modded structure: " + path);
+        
+        LootTableConfig config = new LootTableConfig();
+        config.enabled = true;
+        config.chance = CONFIG.modCompatibility.moddedStructureDefaultChance;
+        config.minScrolls = CONFIG.modCompatibility.moddedStructureMinScrolls;
+        config.maxScrolls = CONFIG.modCompatibility.moddedStructureMaxScrolls;
+        
+        // ✅ Сохраняем в конфиг для будущего
+        CONFIG.lootTables.put(path, config);
+        saveDiscoveredStructure(path, config);
+        
+        return config;
+    }
+
     private static LootTableConfig getLootConfigForPath(String path) {
-        if (CONFIG == null || CONFIG.lootTables == null) return null;
+        if (CONFIG == null || CONFIG.lootTables == null) {
+            return getDefaultModdedLootConfig(path);
+        }
         
         // Точное совпадение
         if (CONFIG.lootTables.containsKey(path)) {
@@ -1010,7 +1082,8 @@ public class AmneziaMod implements ModInitializer {
             }
         }
         
-        return null;
+        // ✅ НОВОЕ: Автоматическое добавление модовых структур
+        return getDefaultModdedLootConfig(path);
     }
 
 

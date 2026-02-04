@@ -86,6 +86,12 @@ public class ConfigLoader {
         public boolean hideModdedRecipes = true;
         public boolean generateScrollsForModdedRecipes = true;
         public String moddedRecipeDefaultRarity = "rare";
+        
+        // ✅ НОВОЕ: Динамическое добавление модовых структур
+        public boolean autoDetectModdedStructures = true;
+        public double moddedStructureDefaultChance = 0.5;
+        public int moddedStructureMinScrolls = 1;
+        public int moddedStructureMaxScrolls = 1;
     }
 
     // ✅ НОВОЕ: Настройки торговли свитков с жителями

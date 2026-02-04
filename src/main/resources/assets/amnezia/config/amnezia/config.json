@@ -71,7 +71,11 @@
   "modCompatibility": {
     "hideModdedRecipes": true,
     "generateScrollsForModdedRecipes": true,
-    "moddedRecipeDefaultRarity": "rare"
+    "moddedRecipeDefaultRarity": "rare",
+    "autoDetectModdedStructures": true,
+    "moddedStructureDefaultChance": 0.5,
+    "moddedStructureMinScrolls": 1,
+    "moddedStructureMaxScrolls": 1
   },
   "villagerTrades": {
     "enabled": true,

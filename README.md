@@ -133,7 +133,6 @@ Players know from the beginning:
 
 - 🪵 All types of planks
 - 🪓 Wooden tools
-- ⛏️ Stone tools
 - 🔦 Torch
 
 ### Group System
